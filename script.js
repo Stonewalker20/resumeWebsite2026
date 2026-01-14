@@ -544,7 +544,7 @@
       role: "Owned the end-to-end pipeline: dataset preparation, labeling alignment, training/evaluation loops, and error analysis write-up.",
       tools: ["Python","PyTorch","Transformers","CRF","Pandas","NumPy"],
       learned: "Most performance regressions were data-contract issues (token alignment, label drift). Building explicit checks and repeatable preprocessing improved stability and made evaluation defensible.",
-      link: "resume.html"
+      link: "Cordell_Stonecipher_Resume.pdf"
     },
     stock: {
       kicker: "Case study • Data Engineering",
@@ -559,7 +559,7 @@
       role: "Designed the update logic, validation checks, and file-structure strategy for maintainable long-running data collection.",
       tools: ["Python","Pandas","OpenPyXL","Validation","Automation"],
       learned: "Reliability came from guardrails: schema checks, idempotent writes, and clear separation of concerns. One good run isn’t enough—pipelines must stay correct over time.",
-      link: "resume.html"
+      link: "Cordell_Stonecipher_Resume.pdf"
     },
     dl: {
       kicker: "Case study • Deep Learning",
@@ -574,7 +574,7 @@
       role: "Implemented compression methods, designed comparisons, and wrote the evaluation narrative.",
       tools: ["PyTorch","CNN","Ablations","Benchmarking"],
       learned: "Compression is an engineering decision: accuracy alone isn’t the metric. Stable evaluation and honest trade-off reporting is what makes results usable.",
-      link: "resume.html"
+      link: "Cordell_Stonecipher_Resume.pdf"
     },
     ops: {
       kicker: "Case study • Reliability",
@@ -588,7 +588,7 @@
       role: "Hands-on troubleshooting and reliability improvements across HVAC/electrical systems with a data-driven approach.",
       tools: ["BAS/Controls","Diagnostics","Documentation","Safety"],
       learned: "The most valuable fixes are safe, repeatable, and documented. This mindset transfers directly to ML systems reliability.",
-      link: "resume.html"
+      link: "Cordell_Stonecipher_Resume.pdf"
     }
   };
 
@@ -637,12 +637,7 @@
     if(key) openDrawer(key);
   });
 
-  // Keyboard shortcuts
-  document.addEventListener("keydown", (e)=>{
-    if(e.target && (e.target.tagName==="INPUT" || e.target.tagName==="TEXTAREA")) return;
-    if(e.key.toLowerCase()==="r") window.location.href = "resume.html";
-    if(e.key.toLowerCase()==="g") window.open("https://github.com/Stonewalker20", "_blank", "noopener");
-  });
+  // Keyboard shortcuts handled globally in the main header script.
 
   // Engineer-grade ADE demo: show preprocessing steps and highlight
   const adeInput = document.getElementById("adeInput");
