@@ -37,7 +37,7 @@ All pages include navigation for seamless movement across the site.
 - CSS3
 - GitHub Pages for deployment
 
-No frameworks were used—this site is intentionally lightweight and transparent.
+No frameworks were used this site is intentionally lightweight and transparent.
 
 ---
 
