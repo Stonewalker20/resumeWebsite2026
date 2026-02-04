@@ -1,0 +1,495 @@
+<mxfile host="app.diagrams.net" modified="2026-02-03T00:00:00.000Z" agent="GPT" version="22.1.0" type="device" compressed="false">
+  <!-- =========================
+       PAGE 1: uc_subsystem1
+       ========================= -->
+  <diagram id="uc_subsystem1" name="uc_subsystem1">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Title -->
+        <mxCell id="t1" value="Use Case Diagram: Subsystem 1 (Portfolio Dashboard &amp; Evidence Mapping)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="20" width="820" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- Student name label -->
+        <mxCell id="n1" value="Student: Student Name 1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="55" width="300" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- Actor -->
+        <mxCell id="a1" value="Student" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="250" width="60" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- System boundary -->
+        <mxCell id="b1" value="Subsystem 1: Portfolio Dashboard" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#f5f5f5;" vertex="1" parent="1">
+          <mxGeometry x="220" y="130" width="760" height="430" as="geometry"/>
+        </mxCell>
+
+        <!-- Use cases (NOW children of b1; geometry is relative to b1) -->
+        <mxCell id="u11" value="Create Project" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="b1">
+          <mxGeometry x="80" y="80" width="210" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="u12" value="Link Skill to Project" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="b1">
+          <mxGeometry x="340" y="80" width="250" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="u13" value="Add Evidence Artifact" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="b1">
+          <mxGeometry x="100" y="190" width="240" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="u14" value="Dashboard Summary Query" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="b1">
+          <mxGeometry x="390" y="200" width="280" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Connectors -->
+        <mxCell id="e11" style="endArrow=none;html=1;" edge="1" parent="1" source="a1" target="u11">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e12" style="endArrow=none;html=1;" edge="1" parent="1" source="a1" target="u12">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e13" style="endArrow=none;html=1;" edge="1" parent="1" source="a1" target="u13">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e14" style="endArrow=none;html=1;" edge="1" parent="1" source="a1" target="u14">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- =========================
+       PAGE 2: uc_subsystem2
+       ========================= -->
+  <diagram id="uc_subsystem2" name="uc_subsystem2">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="t2" value="Use Case Diagram: Subsystem 2 (Skill Management — Granular Skills)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="20" width="860" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="n2" value="Student: Student Name 2" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="55" width="300" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="a2" value="Student" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="250" width="60" height="120" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="b2" value="Subsystem 2: Skill Management" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#f5f5f5;" vertex="1" parent="1">
+          <mxGeometry x="220" y="130" width="760" height="430" as="geometry"/>
+        </mxCell>
+
+        <!-- Use cases (children of b2; geometry relative to b2) -->
+        <mxCell id="u21" value="Add Skill (Granular)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="b2">
+          <mxGeometry x="90" y="80" width="240" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="u22" value="Update Proficiency &amp; Last Used" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="b2">
+          <mxGeometry x="370" y="80" width="320" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="u23" value="View Skill Detail (Join Query)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="b2">
+          <mxGeometry x="90" y="200" width="290" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="u24" value="Gap Query: Missing Evidence" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="b2">
+          <mxGeometry x="420" y="200" width="270" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e21" style="endArrow=none;html=1;" edge="1" parent="1" source="a2" target="u21">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e22" style="endArrow=none;html=1;" edge="1" parent="1" source="a2" target="u22">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e23" style="endArrow=none;html=1;" edge="1" parent="1" source="a2" target="u23">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e24" style="endArrow=none;html=1;" edge="1" parent="1" source="a2" target="u24">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- =========================
+       PAGE 3: uc_subsystem3
+       ========================= -->
+  <diagram id="uc_subsystem3" name="uc_subsystem3">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="t3" value="Use Case Diagram: Subsystem 3 (Resume Import &amp; Confirmation)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="20" width="820" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="n3" value="Student: Cordell Stonecipher" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="55" width="320" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="a3" value="Student" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="250" width="60" height="120" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="b3" value="Subsystem 3: Resume Import &amp; Confirm" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#f5f5f5;" vertex="1" parent="1">
+          <mxGeometry x="220" y="130" width="760" height="430" as="geometry"/>
+        </mxCell>
+
+        <!-- Use cases (children of b3; geometry relative to b3) -->
+        <mxCell id="u31" value="Upload/Paste Resume Snapshot" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="b3">
+          <mxGeometry x="80" y="70" width="300" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="u32" value="Extract Suggested Skills (Taxonomy)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="b3">
+          <mxGeometry x="420" y="70" width="320" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="u33" value="Confirm / Edit / Reject Suggestions" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="b3">
+          <mxGeometry x="80" y="200" width="330" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="u34" value="Persist Confirmed Mappings" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="b3">
+          <mxGeometry x="460" y="200" width="280" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e31" style="endArrow=none;html=1;" edge="1" parent="1" source="a3" target="u31">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e32" style="endArrow=none;html=1;" edge="1" parent="1" source="a3" target="u32">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e33" style="endArrow=none;html=1;" edge="1" parent="1" source="a3" target="u33">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e34" style="endArrow=none;html=1;" edge="1" parent="1" source="a3" target="u34">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- =========================
+       PAGE 4: uc_subsystem4
+       ========================= -->
+  <diagram id="uc_subsystem4" name="uc_subsystem4">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="t4" value="Use Case Diagram: Subsystem 4 (Admin Job Library &amp; Role Weights)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="20" width="860" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="n4" value="Student: Student Name 4" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="55" width="300" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="a4" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="250" width="60" height="120" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="b4" value="Subsystem 4: Admin Library &amp; Role Weights" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#f5f5f5;" vertex="1" parent="1">
+          <mxGeometry x="220" y="130" width="760" height="430" as="geometry"/>
+        </mxCell>
+
+        <!-- Use cases (children of b4; geometry relative to b4) -->
+        <mxCell id="u41" value="Moderate Posting (Approve/Reject)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="b4">
+          <mxGeometry x="80" y="70" width="330" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="u42" value="Tag Posting by Role" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="b4">
+          <mxGeometry x="460" y="70" width="260" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="u43" value="Compute Role Skill Weights (Aggregate)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="b4">
+          <mxGeometry x="80" y="200" width="360" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="u44" value="Maintain Taxonomy (Aliases/Relations)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="b4">
+          <mxGeometry x="480" y="200" width="310" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e41" style="endArrow=none;html=1;" edge="1" parent="1" source="a4" target="u41">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e42" style="endArrow=none;html=1;" edge="1" parent="1" source="a4" target="u42">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e43" style="endArrow=none;html=1;" edge="1" parent="1" source="a4" target="u43">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e44" style="endArrow=none;html=1;" edge="1" parent="1" source="a4" target="u44">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+
+       PAGE 5: erd
+       ========================= -->
+  <diagram id="erd" name="erd">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="te" value="Initial ERD (Draft) — SkillBridge" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="600" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- Entities (simple rectangles; initial draft is acceptable) -->
+        <mxCell id="EUser" value="User&#xa;PK user_id&#xa;role (student/admin)&#xa;created_at" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="90" width="220" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="ESkill" value="Skill&#xa;PK skill_id&#xa;name&#xa;category&#xa;description" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="340" y="90" width="240" height="120" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="EProject" value="Project&#xa;PK project_id&#xa;FK user_id&#xa;title&#xa;summary&#xa;status" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="260" width="220" height="120" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="EProjectSkill" value="ProjectSkill (Junction)&#xa;FK project_id&#xa;FK skill_id" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="340" y="260" width="240" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="EEvidence" value="Evidence&#xa;PK evidence_id&#xa;FK user_id&#xa;FK project_id&#xa;FK skill_id&#xa;type, url, notes" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="640" y="240" width="270" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="EJobPosting" value="JobPosting&#xa;PK posting_id&#xa;FK submitter_user_id&#xa;title, company&#xa;raw_text&#xa;status, created_at" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="440" width="250" height="150" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="EPostingSkill" value="PostingSkill&#xa;FK posting_id&#xa;FK skill_id&#xa;confidence&#xa;evidence_phrase" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="340" y="450" width="240" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="ERole" value="Role&#xa;PK role_id&#xa;role_name" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="640" y="440" width="200" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="ERoleSkillWeight" value="RoleSkillWeight&#xa;FK role_id&#xa;FK skill_id&#xa;weight&#xa;last_updated" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="640" y="540" width="260" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- Relationships (simple connectors) -->
+        <mxCell id="r1" style="endArrow=block;html=1;" edge="1" parent="1" source="EUser" target="EProject">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r2" style="endArrow=block;html=1;" edge="1" parent="1" source="EProject" target="EProjectSkill">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r3" style="endArrow=block;html=1;" edge="1" parent="1" source="ESkill" target="EProjectSkill">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r4" style="endArrow=block;html=1;" edge="1" parent="1" source="EEvidence" target="EProject">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r5" style="endArrow=block;html=1;" edge="1" parent="1" source="EUser" target="EJobPosting">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r6" style="endArrow=block;html=1;" edge="1" parent="1" source="EJobPosting" target="EPostingSkill">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r7" style="endArrow=block;html=1;" edge="1" parent="1" source="ESkill" target="EPostingSkill">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r8" style="endArrow=block;html=1;" edge="1" parent="1" source="ERole" target="ERoleSkillWeight">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r9" style="endArrow=block;html=1;" edge="1" parent="1" source="ESkill" target="ERoleSkillWeight">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- =========================
+       PAGE 6: ui_dashboard (low-fidelity wireframe)
+       ========================= -->
+  <diagram id="ui_dashboard" name="ui_dashboard">
+    <mxGraphModel dx="1200" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="wdt" value="Wireframe: Dashboard" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="300" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- Frame -->
+        <mxCell id="wdb1" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="1120" height="720" as="geometry"/>
+        </mxCell>
+
+        <!-- Top nav -->
+        <mxCell id="nav" value="SkillBridge | Dashboard | Skills | Projects | Jobs | Admin" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#f5f5f5;" vertex="1" parent="1">
+          <mxGeometry x="60" y="90" width="1080" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Cards -->
+        <mxCell id="c1" value="Summary Metrics&#xa;- Match Score (latest)&#xa;- Evidence Coverage&#xa;- Recent Activity" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="160" width="340" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="c2" value="Top Skills (with evidence count)" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="420" y="160" width="340" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="c3" value="Recommended Next Actions&#xa;- Add evidence for X&#xa;- Analyze a posting&#xa;- Add missing skill Y" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="780" y="160" width="360" height="160" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c4" value="Recent Projects (list)" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="340" width="520" height="240" as="geometry"/>
+        </mxCell>
+        <mxCell id="c5" value="Latest Job Analyses (table)" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="600" y="340" width="540" height="240" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c6" value="Evidence Coverage Heatmap (simple)" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="600" width="1080" height="170" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- =========================
+       PAGE 7: ui_skills
+       ========================= -->
+  <diagram id="ui_skills" name="ui_skills">
+    <mxGraphModel dx="1200" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="st" value="Wireframe: Skills" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="300" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="sframe" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="1120" height="720" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="snav" value="SkillBridge | Dashboard | Skills | Projects | Jobs | Admin" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#f5f5f5;" vertex="1" parent="1">
+          <mxGeometry x="60" y="90" width="1080" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="sleft" value="Skill List&#xa;[Search] [Filter Category]&#xa;- Python&#xa;- NumPy&#xa;- Pandas&#xa;- SQL&#xa;- PostgreSQL&#xa;..." style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="160" width="420" height="610" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="sright" value="Skill Detail&#xa;Name: NumPy&#xa;Category: Programming&#xa;Proficiency: [ ]&#xa;Last Used: [date]&#xa;&#xa;Linked Projects (list)&#xa;Evidence (list)&#xa;&#xa;Buttons: [Add Evidence] [Link Project] [Update]" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="500" y="160" width="640" height="610" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- =========================
+       PAGE 8: ui_resume_import
+       ========================= -->
+  <diagram id="ui_resume_import" name="ui_resume_import">
+    <mxGraphModel dx="1200" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="rt" value="Wireframe: Resume Import &amp; Confirm" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="420" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="rframe" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="1120" height="720" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="rnav" value="SkillBridge | Dashboard | Skills | Projects | Jobs | Admin" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#f5f5f5;" vertex="1" parent="1">
+          <mxGeometry x="60" y="90" width="1080" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="rleft" value="Paste / Upload Resume&#xa;[Upload PDF/Text]&#xa;[Paste Text Box]" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="160" width="520" height="260" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="rright" value="Extracted Suggestions&#xa;Skills (checkbox list)&#xa;Projects (checkbox list)&#xa;&#xa;Buttons: [Approve Selected] [Edit] [Reject]" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="600" y="160" width="540" height="260" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="rconfirm" value="Confirmation Summary&#xa;- Added Skills: ...&#xa;- Added Projects: ...&#xa;- Evidence prompts: ...&#xa;&#xa;[Save to Dashboard]" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="440" width="1080" height="330" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- =========================
+       PAGE 9: ui_job_analyzer
+       ========================= -->
+  <diagram id="ui_job_analyzer" name="ui_job_analyzer">
+    <mxGraphModel dx="1200" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="jt" value="Wireframe: Paste Job &amp; Analyze Match" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="450" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="jframe" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="1120" height="720" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="jnav" value="SkillBridge | Dashboard | Skills | Projects | Jobs | Admin" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#f5f5f5;" vertex="1" parent="1">
+          <mxGeometry x="60" y="90" width="1080" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="jpost" value="Paste Job Description&#xa;[Title] [Company]&#xa;[Large Text Box]&#xa;Buttons: [Analyze] [Save Posting]" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="160" width="520" height="280" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="jscore" value="Match Summary&#xa;Score: 0.72&#xa;Top Missing Skills: ...&#xa;[Add to Plan]" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="600" y="160" width="540" height="120" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="jlists" value="Breakdown&#xa;Exact Matches (list)&#xa;Related Coverage (list)&#xa;Missing Skills (list)" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="600" y="300" width="540" height="470" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- =========================
+       PAGE 10: ui_admin_library
+       ========================= -->
+  <diagram id="ui_admin_library" name="ui_admin_library">
+    <mxGraphModel dx="1200" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="at" value="Wireframe: Admin Job Library &amp; Role Weights" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="520" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="aframe" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="1120" height="720" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="anav" value="SkillBridge | Dashboard | Skills | Projects | Jobs | Admin" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#f5f5f5;" vertex="1" parent="1">
+          <mxGeometry x="60" y="90" width="1080" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="apost" value="Moderation Queue&#xa;Postings awaiting review (table)&#xa;Buttons: [Approve] [Reject] [Assign Role]" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="160" width="520" height="300" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="arole" value="Role Library&#xa;Role -> Top Skills + Weights&#xa;Filters: [Role] [Date Range]&#xa;Buttons: [Recompute Weights]" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="600" y="160" width="540" height="300" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="atax" value="Taxonomy Maintenance&#xa;Skill Aliases (CRUD)&#xa;Skill Relations (subset-of / related-to)&#xa;Buttons: [Add Alias] [Add Relation]" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="480" width="1080" height="290" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
