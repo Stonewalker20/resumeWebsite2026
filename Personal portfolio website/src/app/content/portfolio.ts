@@ -23,6 +23,7 @@ export const portfolio = {
   contactPath: portfolioPaths.email,
   linkedin: portfolioPaths.linkedin,
   commitCount: __COMMIT_COUNT__,
+  contributionCount: 264,
   resumePath: portfolioPaths.resume,
   updated: "March 2026",
   heroHeadline: "I build AI and machine-learning systems that hold up under real use.",

@@ -105,7 +105,7 @@ export function Home() {
 
         <div className="col-span-12 lg:col-span-4 lg:row-start-2 glass-dark border border-secondary/20 clip-corner-br p-6 holographic">
           <div className="font-mono text-xs text-secondary mb-4 tracking-wider">SYSTEM.METRICS</div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             <div>
               <div className="text-3xl font-mono text-primary mb-1">{portfolio.caseStudies.length}</div>
               <div className="text-xs text-muted-foreground font-mono">FEATURED</div>
@@ -122,9 +122,13 @@ export function Home() {
               <div className="text-3xl font-mono text-secondary mb-1">{portfolio.commitCount}</div>
               <div className="text-xs text-muted-foreground font-mono">COMMITS</div>
             </div>
+            <div>
+              <div className="text-3xl font-mono text-primary mb-1">{portfolio.contributionCount}</div>
+              <div className="text-xs text-muted-foreground font-mono">1Y CONTRIBS</div>
+            </div>
           </div>
           <div className="mt-4 glass border border-border clip-corner-tl p-3 font-mono text-xs text-muted-foreground">
-            Current portfolio content reflects active GitHub work, current resume details, and research projects.
+            Current portfolio content reflects active GitHub work, current resume details, research projects, and overall GitHub activity.
           </div>
         </div>
       </div>
