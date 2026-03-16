@@ -22,7 +22,6 @@ export const portfolio = {
   email: emailAddress,
   contactPath: portfolioPaths.email,
   linkedin: portfolioPaths.linkedin,
-  commitCount: __COMMIT_COUNT__,
   contributionCount: 264,
   resumePath: portfolioPaths.resume,
   updated: "March 2026",
