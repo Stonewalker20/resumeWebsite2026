@@ -1,6 +1,9 @@
+const assetUrl = (relativePath: string) =>
+  `${import.meta.env.BASE_URL}${relativePath.replace(/^\/+/, "")}`;
+
 const portfolioPaths = {
   github: "https://github.com/Stonewalker20",
-  resume: "/Cordell_Stonecipher_Resume.pdf",
+  resume: assetUrl("Cordell_Stonecipher_Resume.pdf"),
 };
 
 export const portfolio = {
@@ -115,7 +118,7 @@ export const portfolio = {
       whyItMatters:
         "Noisy text pipelines fail silently. Evaluation discipline prevents false confidence.",
       tools: ["NLP", "Transformers", "Error analysis"],
-      link: "/reports/crossDomain_ADE_report.pdf",
+      link: assetUrl("reports/crossDomain_ADE_report.pdf"),
       linkLabel: "Open report",
     },
     {
@@ -139,7 +142,7 @@ export const portfolio = {
       whyItMatters:
         "Performance claims only matter if they survive deployment constraints.",
       tools: ["CNN", "Ablations", "Latency"],
-      link: "/reports/YOLOv8_report.pdf",
+      link: assetUrl("reports/YOLOv8_report.pdf"),
       linkLabel: "Open report",
     },
   ],
@@ -148,25 +151,25 @@ export const portfolio = {
       title: "Mining Reddit for ADE Detection",
       body:
         "Weak supervision and classical NLP pipelines using Reddit data, with careful preprocessing, TF-IDF features, and linear models.",
-      link: "/reports/ADE_redditmining_report.pdf",
+      link: assetUrl("reports/ADE_redditmining_report.pdf"),
     },
     {
       title: "Cross-Domain ADE Extraction",
       body:
         "Sequence labeling across clean and noisy domains, comparing CRFs and transformer models under real domain shift.",
-      link: "/reports/crossDomain_ADE_report.pdf",
+      link: assetUrl("reports/crossDomain_ADE_report.pdf"),
     },
     {
       title: "Cancer Mortality Prediction (OLS Regression)",
       body:
         "Interpretable regression with diagnostics, assumption checking, and disciplined feature handling.",
-      link: "/reports/OLS_Regression.pdf",
+      link: assetUrl("reports/OLS_Regression.pdf"),
     },
     {
       title: "Military Asset Detection (YOLOv8)",
       body:
         "End-to-end computer vision pipeline covering exploration, training, and evaluation on imbalanced data.",
-      link: "/reports/YOLOv8_report.pdf",
+      link: assetUrl("reports/YOLOv8_report.pdf"),
     },
   ],
   hobbies: [
