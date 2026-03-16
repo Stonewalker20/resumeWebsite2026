@@ -1,10 +1,16 @@
+import { execSync } from 'node:child_process'
 import { defineConfig } from 'vite'
 import path from 'path'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 
+const commitCount = Number.parseInt(execSync('git rev-list --count HEAD', { encoding: 'utf8' }).trim(), 10)
+
 export default defineConfig({
   base: '/resumeWebsite2026/',
+  define: {
+    __COMMIT_COUNT__: JSON.stringify(commitCount),
+  },
   plugins: [
     // The React and Tailwind plugins are both required for Make, even if
     // Tailwind is not being actively used – do not remove them

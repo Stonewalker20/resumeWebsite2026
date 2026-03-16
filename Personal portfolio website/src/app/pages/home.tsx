@@ -105,7 +105,7 @@ export function Home() {
 
         <div className="col-span-12 lg:col-span-4 lg:row-start-2 glass-dark border border-secondary/20 clip-corner-br p-6 holographic">
           <div className="font-mono text-xs text-secondary mb-4 tracking-wider">SYSTEM.METRICS</div>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div>
               <div className="text-3xl font-mono text-primary mb-1">{portfolio.caseStudies.length}</div>
               <div className="text-xs text-muted-foreground font-mono">FEATURED</div>
@@ -118,9 +118,13 @@ export function Home() {
               <div className="text-3xl font-mono text-primary mb-1">{portfolio.researchReports.length}</div>
               <div className="text-xs text-muted-foreground font-mono">REPORTS</div>
             </div>
+            <div>
+              <div className="text-3xl font-mono text-secondary mb-1">{portfolio.commitCount}</div>
+              <div className="text-xs text-muted-foreground font-mono">COMMITS</div>
+            </div>
           </div>
           <div className="mt-4 glass border border-border clip-corner-tl p-3 font-mono text-xs text-muted-foreground">
-            Public GitHub work now drives the portfolio content instead of placeholder projects.
+            Current portfolio content reflects active GitHub work, current resume details, and research projects.
           </div>
         </div>
       </div>
@@ -201,7 +205,7 @@ export function Home() {
             <BookOpen className="w-6 h-6 text-secondary" />
           </div>
           <h3 className="font-mono tracking-wider mb-2">CREDENTIALS.DB</h3>
-          <p className="text-muted-foreground text-sm mb-4 font-mono">Summary • current stack • repo-backed skills</p>
+          <p className="text-muted-foreground text-sm mb-4 font-mono">Summary • current stack • applied skills</p>
           <span className="inline-flex items-center gap-2 text-secondary text-sm group-hover:gap-3 transition-all font-mono">
             QUERY <ArrowRight className="w-4 h-4" />
           </span>
@@ -231,7 +235,7 @@ export function Home() {
           <div className="relative z-10">
             <h2 className="text-3xl font-mono tracking-wider mb-4 text-background">QUICK.ACCESS</h2>
             <p className="text-background/80 mb-6 font-mono text-sm">
-              Fast contact, LinkedIn, resume PDF, and a repo-backed snapshot of current AI and ML work.
+              Fast contact, LinkedIn, resume PDF, and a direct view into current AI and ML work.
             </p>
             <div className="flex flex-wrap gap-3">
               <a

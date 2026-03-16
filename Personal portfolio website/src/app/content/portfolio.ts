@@ -22,6 +22,7 @@ export const portfolio = {
   email: emailAddress,
   contactPath: portfolioPaths.email,
   linkedin: portfolioPaths.linkedin,
+  commitCount: __COMMIT_COUNT__,
   resumePath: portfolioPaths.resume,
   updated: "March 2026",
   heroHeadline: "I build AI and machine-learning systems that hold up under real use.",
@@ -54,7 +55,7 @@ export const portfolio = {
   valueProps: [
     {
       title: "What I deliver",
-      body: "repo-backed AI and ML systems that combine product UI, backend services, model logic, and evaluation",
+      body: "AI and ML systems that combine product UI, backend services, model logic, and evaluation",
     },
     {
       title: "What I optimize for",
