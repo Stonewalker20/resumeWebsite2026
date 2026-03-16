@@ -1,6 +1,6 @@
 # Resume Website – 2026
 
-This repository contains the source and deployed output for my GitHub Pages portfolio.
+This repository contains the source for my GitHub Pages portfolio.
 
 Live site:
 `https://stonewalker20.github.io/resumeWebsite2026/tldr.html`
@@ -9,10 +9,8 @@ Live site:
 
 - `Personal portfolio website/`
   React + Vite source for the portfolio frontend
-- root `index.html`, `tldr.html`, `courseProject.html`, `hobbies.html`, `resume.html`, `experience.html`
-  GitHub Pages deployment files generated from the React app
 - `assets/` and `reports/`
-  Built frontend assets and public PDF/report files used by the live site
+  Legacy deployment assets and public PDF/report files still present in the repository
 
 ## Development
 
@@ -21,17 +19,21 @@ From `Personal portfolio website/`:
 1. `npm install`
 2. `npm run dev`
 
-## Publish To GitHub Pages
+## GitHub Pages Deployment
 
-From `Personal portfolio website/`:
+GitHub Pages is deployed through GitHub Actions using:
 
-1. `npm run build:pages`
+- `.github/workflows/deploy-pages.yml`
 
-That command:
+The workflow:
 
-- builds the React frontend with the repository base path
-- generates the Pages entry files for the existing public URLs
-- syncs the built site into the repository root for GitHub Pages
+- installs dependencies in `Personal portfolio website/`
+- runs `npm run build`
+- deploys `Personal portfolio website/dist-pages` as the Pages artifact
+
+In repository settings, GitHub Pages should use:
+
+- `Build and deployment` → `Source` → `GitHub Actions`
 
 ## Public URLs
 

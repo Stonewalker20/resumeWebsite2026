@@ -10,5 +10,9 @@ This directory contains the React + Vite source for the portfolio frontend used 
 - `npm run build`
 - `npm run build:pages`
 
-`npm run build:pages` builds the multi-page frontend and syncs the generated site to the repository root so GitHub Pages continues serving the existing public URLs like `tldr.html` and `courseProject.html`.
+`npm run build` creates the multi-page production output in `dist-pages/`.
+
+GitHub Pages deployment is handled by the repository workflow at `.github/workflows/deploy-pages.yml`, which uploads `dist-pages/` as the Pages artifact.
+
+`npm run build:pages` is still available for local syncing into the repository root, but GitHub Pages should be configured to deploy through GitHub Actions rather than from the branch root.
   
