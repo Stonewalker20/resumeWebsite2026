@@ -1,11 +1,14 @@
 
-  # Personal portfolio website
+# Personal Portfolio Website
 
-  This is a code bundle for Personal portfolio website. The original project is available at https://www.figma.com/design/niFCsMyB5R7ZNk7ROqg2M6/Personal-portfolio-website.
+This directory contains the React + Vite source for the portfolio frontend used by the `resumeWebsite2026` GitHub Pages site.
 
-  ## Running the code
+## Commands
 
-  Run `npm i` to install the dependencies.
+- `npm install`
+- `npm run dev`
+- `npm run build`
+- `npm run build:pages`
 
-  Run `npm run dev` to start the development server.
+`npm run build:pages` builds the multi-page frontend and syncs the generated site to the repository root so GitHub Pages continues serving the existing public URLs like `tldr.html` and `courseProject.html`.
   

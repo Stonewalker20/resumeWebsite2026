@@ -5,6 +5,7 @@ import { Resume } from "./pages/resume";
 import { Experience } from "./pages/experience";
 import { Projects } from "./pages/projects";
 import { Hobbies } from "./pages/hobbies";
+import { pagePaths } from "./page-paths";
 
 export const router = createBrowserRouter([
   {
@@ -12,10 +13,14 @@ export const router = createBrowserRouter([
     Component: Layout,
     children: [
       { index: true, Component: Home },
-      { path: "resume", Component: Resume },
-      { path: "experience", Component: Experience },
-      { path: "projects", Component: Projects },
-      { path: "hobbies", Component: Hobbies },
+      { path: "index.html", Component: Home },
+      { path: pagePaths.resume.slice(1), Component: Resume },
+      { path: pagePaths.profile.slice(1), Component: Experience },
+      { path: pagePaths.experience.slice(1), Component: Experience },
+      { path: pagePaths.projects.slice(1), Component: Projects },
+      { path: pagePaths.hobbies.slice(1), Component: Hobbies },
     ],
   },
-]);
+], {
+  basename: import.meta.env.BASE_URL,
+});

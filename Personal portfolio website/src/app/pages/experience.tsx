@@ -1,6 +1,7 @@
 import { ArrowRight, Compass, Download, Gauge, Github, ShieldCheck, Target } from "lucide-react";
 import { Link } from "react-router";
 import { portfolio } from "../content/portfolio";
+import { pagePaths } from "../page-paths";
 
 export function Experience() {
   return (
@@ -132,7 +133,7 @@ export function Experience() {
                 OPEN.RESUME
               </a>
               <Link
-                to="/projects"
+                to={pagePaths.projects}
                 className="inline-flex items-center justify-center gap-2 glass border border-border px-6 py-3 clip-corner-tl hover:border-primary/40 transition-colors font-mono tracking-wider w-full"
               >
                 <ArrowRight className="w-4 h-4" />

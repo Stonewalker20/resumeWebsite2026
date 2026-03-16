@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { ArrowRight, BookOpen, Download, Github, Layers, ShieldCheck, Terminal, Waves } from "lucide-react";
 import { portfolio } from "../content/portfolio";
+import { pagePaths } from "../page-paths";
 
 export function Home() {
   return (
@@ -24,7 +25,7 @@ export function Home() {
             <p className="text-sm text-muted-foreground mb-8 max-w-3xl font-mono">{portfolio.heroBody}</p>
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/projects"
+                to={pagePaths.projects}
                 className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 clip-corner-tr hover:opacity-90 transition-all font-mono tracking-wider glow-edge group"
               >
                 <Terminal className="w-4 h-4 group-hover:rotate-12 transition-transform" />
@@ -84,7 +85,7 @@ export function Home() {
 
       <div className="grid grid-cols-12 gap-4 mb-8">
         <Link
-          to="/experience"
+          to={pagePaths.profile}
           className="col-span-12 md:col-span-5 glass border border-border clip-corner-all p-6 hover:border-primary/50 transition-all group relative overflow-hidden"
         >
           <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-2xl group-hover:bg-primary/10 transition-all"></div>
@@ -101,7 +102,7 @@ export function Home() {
         </Link>
 
         <Link
-          to="/projects"
+          to={pagePaths.projects}
           className="col-span-12 md:col-span-7 row-span-2 glass-dark border border-primary/20 clip-corner-br p-8 hover:border-primary/50 transition-all group relative overflow-hidden"
         >
           <div className="circuit-pattern absolute inset-0 opacity-50"></div>
@@ -134,7 +135,7 @@ export function Home() {
         </Link>
 
         <Link
-          to="/resume"
+          to={pagePaths.resume}
           className="col-span-12 md:col-span-5 glass border border-border clip-corner-tl p-6 hover:border-secondary/50 transition-all group"
         >
           <div className="w-12 h-12 clip-corner-br bg-gradient-to-br from-secondary/20 to-transparent flex items-center justify-center mb-4 border border-secondary/30">
@@ -150,7 +151,7 @@ export function Home() {
 
       <div className="grid grid-cols-12 gap-4 mb-8">
         <Link
-          to="/hobbies"
+          to={pagePaths.hobbies}
           className="col-span-12 md:col-span-6 diagonal-split glass-dark border border-border p-8 hover:border-primary/50 transition-all group relative overflow-hidden h-64"
         >
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/15"></div>
@@ -193,7 +194,7 @@ export function Home() {
                 GITHUB
               </a>
               <Link
-                to="/resume"
+                to={pagePaths.resume}
                 className="inline-flex items-center gap-2 glass-dark border border-background/30 px-5 py-2.5 clip-corner-br hover:bg-background/10 transition-colors font-mono text-sm tracking-wider text-background"
               >
                 <Layers className="w-4 h-4" />
