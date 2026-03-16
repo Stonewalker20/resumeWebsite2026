@@ -1,4 +1,4 @@
-import { Download, FileText, Github, ShieldCheck, Sparkles, Target } from "lucide-react";
+import { Download, FileText, Linkedin, Mail, ShieldCheck, Sparkles, Target } from "lucide-react";
 import { portfolio } from "../content/portfolio";
 
 export function Resume() {
@@ -27,9 +27,18 @@ export function Resume() {
                 Fallback paths • reproducibility • documented handoff
               </span>
               <span className="inline-flex items-center gap-2">
-                <Github className="w-4 h-4" />
-                github.com/Stonewalker20
+                <Mail className="w-4 h-4" />
+                {portfolio.email}
               </span>
+              <a
+                href={portfolio.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 hover:text-background transition-colors"
+              >
+                <Linkedin className="w-4 h-4" />
+                linkedin.com/in/cordell-stonecipher-27a54a14a
+              </a>
             </div>
           </div>
         </div>
@@ -45,6 +54,13 @@ export function Resume() {
             >
               <Download className="w-4 h-4" />
               EXPORT.PDF
+            </a>
+            <a
+              href={portfolio.contactPath}
+              className="inline-flex items-center gap-2 glass border border-border px-6 py-3 clip-corner-tl hover:border-primary/40 transition-colors mb-4 font-mono tracking-wider w-full justify-center"
+            >
+              <Mail className="w-4 h-4" />
+              CONTACT.ME
             </a>
             <div className="text-xs text-muted-foreground font-mono">Last updated: {portfolio.updated}</div>
           </div>

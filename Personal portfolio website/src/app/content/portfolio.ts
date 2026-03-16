@@ -2,9 +2,13 @@ const assetUrl = (relativePath: string) =>
   `${import.meta.env.BASE_URL}${relativePath.replace(/^\/+/, "")}`;
 
 const githubBase = "https://github.com/Stonewalker20";
+const emailAddress = "stoneciphercordell@gmail.com";
+const linkedinUrl = "https://linkedin.com/in/cordell-stonecipher-27a54a14a";
 
 const portfolioPaths = {
   github: githubBase,
+  email: `mailto:${emailAddress}`,
+  linkedin: linkedinUrl,
   resume: assetUrl("Cordell_Stonecipher_Resume.pdf"),
 };
 
@@ -15,6 +19,9 @@ export const portfolio = {
   role: "Machine Learning Engineer / Applied AI Engineer",
   focus: "Reliability, Evaluation, and Product Systems",
   github: portfolioPaths.github,
+  email: emailAddress,
+  contactPath: portfolioPaths.email,
+  linkedin: portfolioPaths.linkedin,
   resumePath: portfolioPaths.resume,
   updated: "March 2026",
   heroHeadline: "I build AI and machine-learning systems that hold up under real use.",

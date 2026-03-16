@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, Outlet, useLocation } from "react-router";
-import { Download, Github, Menu, Terminal, X } from "lucide-react";
+import { Download, Github, Linkedin, Mail, Menu, Terminal, X } from "lucide-react";
 import { portfolio } from "../content/portfolio";
 import { pagePaths } from "../page-paths";
 
@@ -60,8 +60,22 @@ export function Layout() {
             </nav>
 
             <div className="hidden md:flex items-center gap-2">
-              <div className="w-2 h-2 bg-primary rounded-full pulse-glow"></div>
-              <span className="text-xs text-muted-foreground font-mono">ONLINE</span>
+              <a
+                href={portfolio.contactPath}
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 clip-corner-tl hover:opacity-90 transition-opacity font-mono text-xs tracking-wider"
+              >
+                <Mail className="w-3.5 h-3.5" />
+                CONTACT
+              </a>
+              <a
+                href={portfolio.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 glass border border-border px-4 py-2 clip-corner-br hover:border-primary/40 transition-colors font-mono text-xs tracking-wider"
+              >
+                <Linkedin className="w-3.5 h-3.5" />
+                LINKEDIN
+              </a>
             </div>
 
             <button
@@ -90,6 +104,20 @@ export function Layout() {
                   {item.label.toUpperCase()}
                 </Link>
               )})}
+              <a
+                href={portfolio.contactPath}
+                className="block py-3 px-4 clip-corner-tl bg-primary text-primary-foreground font-mono text-sm tracking-wider"
+              >
+                CONTACT
+              </a>
+              <a
+                href={portfolio.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block py-3 px-4 clip-corner-tl text-muted-foreground hover:glass hover:border hover:border-border font-mono text-sm tracking-wider"
+              >
+                LINKEDIN
+              </a>
             </nav>
           )}
         </div>
@@ -108,7 +136,23 @@ export function Layout() {
             </div>
             <div className="space-y-2">
               <div className="text-sm font-mono text-primary tracking-wider">QUICK.LINKS</div>
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href={portfolio.contactPath}
+                  className="inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-primary transition-colors font-mono"
+                >
+                  <Mail className="w-3.5 h-3.5" />
+                  EMAIL
+                </a>
+                <a
+                  href={portfolio.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-primary transition-colors font-mono"
+                >
+                  <Linkedin className="w-3.5 h-3.5" />
+                  LINKEDIN
+                </a>
                 <a
                   href={portfolio.github}
                   target="_blank"

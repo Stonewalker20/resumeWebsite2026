@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { ArrowRight, BookOpen, Download, Github, Layers, ShieldCheck, Terminal, Waves } from "lucide-react";
+import { ArrowRight, BookOpen, Download, Github, Layers, Linkedin, Mail, ShieldCheck, Terminal, Waves } from "lucide-react";
 import { portfolio } from "../content/portfolio";
 import { pagePaths } from "../page-paths";
 
@@ -22,11 +22,33 @@ export function Home() {
               <span className="block text-primary data-bars">ML.SYSTEMS</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-6 max-w-2xl font-mono">{portfolio.heroHeadline}</p>
-            <p className="text-sm text-muted-foreground mb-8 max-w-3xl font-mono">{portfolio.heroBody}</p>
+            <p className="text-sm text-muted-foreground mb-4 max-w-3xl font-mono">{portfolio.heroBody}</p>
+            <div className="flex flex-wrap items-center gap-3 mb-8 text-xs font-mono text-muted-foreground">
+              <a href={portfolio.contactPath} className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
+                <Mail className="w-3.5 h-3.5" />
+                {portfolio.email}
+              </a>
+              <a
+                href={portfolio.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 hover:text-primary transition-colors"
+              >
+                <Linkedin className="w-3.5 h-3.5" />
+                LINKEDIN
+              </a>
+            </div>
             <div className="flex flex-wrap gap-4">
+              <a
+                href={portfolio.contactPath}
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 clip-corner-tr hover:opacity-90 transition-all font-mono tracking-wider glow-edge group"
+              >
+                <Mail className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
+                CONTACT.ME
+              </a>
               <Link
                 to={pagePaths.projects}
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 clip-corner-tr hover:opacity-90 transition-all font-mono tracking-wider glow-edge group"
+                className="inline-flex items-center gap-2 glass border border-border px-6 py-3 clip-corner-tr hover:border-primary/50 transition-all font-mono tracking-wider group"
               >
                 <Terminal className="w-4 h-4 group-hover:rotate-12 transition-transform" />
                 VIEW.PROJECTS
@@ -49,6 +71,15 @@ export function Home() {
               >
                 <Github className="w-4 h-4" />
                 GITHUB.REPOS
+              </a>
+              <a
+                href={portfolio.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 glass border border-border px-6 py-3 clip-corner-br hover:border-primary/50 transition-all font-mono tracking-wider"
+              >
+                <Linkedin className="w-4 h-4" />
+                LINKEDIN
               </a>
             </div>
           </div>
@@ -179,17 +210,33 @@ export function Home() {
           <div className="relative z-10">
             <h2 className="text-3xl font-mono tracking-wider mb-4 text-background">QUICK.ACCESS</h2>
             <p className="text-background/80 mb-6 font-mono text-sm">
-              Resume PDF, GitHub, and a repo-backed snapshot of current AI and ML work.
+              Fast contact, LinkedIn, resume PDF, and a repo-backed snapshot of current AI and ML work.
             </p>
             <div className="flex flex-wrap gap-3">
+              <a
+                href={portfolio.contactPath}
+                className="inline-flex items-center gap-2 bg-background text-primary px-5 py-2.5 clip-corner-tl hover:opacity-90 transition-opacity font-mono text-sm tracking-wider"
+              >
+                <Mail className="w-4 h-4" />
+                EMAIL
+              </a>
               <a
                 href={portfolio.resumePath}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-background text-primary px-5 py-2.5 clip-corner-tl hover:opacity-90 transition-opacity font-mono text-sm tracking-wider"
+                className="inline-flex items-center gap-2 glass-dark border border-background/30 px-5 py-2.5 clip-corner-br hover:bg-background/10 transition-colors font-mono text-sm tracking-wider text-background"
               >
                 <Download className="w-4 h-4" />
                 RESUME
+              </a>
+              <a
+                href={portfolio.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 glass-dark border border-background/30 px-5 py-2.5 clip-corner-br hover:bg-background/10 transition-colors font-mono text-sm tracking-wider text-background"
+              >
+                <Linkedin className="w-4 h-4" />
+                LINKEDIN
               </a>
               <a
                 href={portfolio.github}
