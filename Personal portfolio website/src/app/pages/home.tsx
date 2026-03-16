@@ -38,6 +38,10 @@ export function Home() {
                 LINKEDIN
               </a>
             </div>
+            <div className="glass border border-primary/20 clip-corner-tl p-4 mb-8 max-w-3xl">
+              <div className="text-xs font-mono text-primary mb-2 tracking-wider">SEEKING.NOW</div>
+              <p className="text-sm text-muted-foreground font-mono">{portfolio.seeking}</p>
+            </div>
             <div className="flex flex-wrap gap-4">
               <a
                 href={portfolio.contactPath}
@@ -119,6 +123,23 @@ export function Home() {
             Public GitHub work now drives the portfolio content instead of placeholder projects.
           </div>
         </div>
+      </div>
+
+      <div className="grid grid-cols-12 gap-4 mb-8">
+        {portfolio.proofPoints.map((item, index) => (
+          <div
+            key={item.label}
+            className={`col-span-12 md:col-span-4 glass border border-border p-5 relative overflow-hidden ${
+              index === 0 ? "clip-corner-tl" : index === 1 ? "clip-corner-tr" : "clip-corner-br"
+            }`}
+          >
+            <div className="grid-pattern absolute inset-0 opacity-20"></div>
+            <div className="relative z-10">
+              <div className="text-xs font-mono text-primary mb-2 tracking-wider">{item.label.toUpperCase()}</div>
+              <p className="text-sm text-muted-foreground font-mono leading-relaxed">{item.value}</p>
+            </div>
+          </div>
+        ))}
       </div>
 
       <div className="grid grid-cols-12 gap-4 mb-8">

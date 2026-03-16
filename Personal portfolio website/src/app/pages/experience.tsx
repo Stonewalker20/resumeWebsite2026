@@ -89,6 +89,27 @@ export function Experience() {
         </div>
       </div>
 
+      <div className="mb-12 glass border border-border clip-corner-all p-8 relative overflow-hidden">
+        <div className="grid-pattern absolute inset-0 opacity-20"></div>
+        <div className="relative z-10">
+          <div className="font-mono text-xs text-primary mb-6 tracking-wider">RECENT.BUILD.TIMELINE</div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            {portfolio.buildTimeline.map((item, index) => (
+              <div
+                key={`${item.period}-${item.title}`}
+                className={`glass-dark border border-border p-5 relative ${
+                  index % 2 === 0 ? "clip-corner-tl" : "clip-corner-br"
+                }`}
+              >
+                <div className="text-xs text-secondary font-mono mb-2">{item.period}</div>
+                <h3 className="font-mono tracking-wider mb-2">{item.title}</h3>
+                <p className="text-sm text-muted-foreground font-mono leading-relaxed">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <div className="grid grid-cols-12 gap-4">
         <div className="col-span-12 lg:col-span-8 clip-corner-all bg-gradient-to-br from-primary via-secondary to-primary p-8 relative overflow-hidden">
           <div className="mesh-gradient absolute inset-0"></div>
@@ -102,6 +123,9 @@ export function Experience() {
               I focus on the gap between "a demo that works once" and "a system that stays useful": product-aware workflows,
               measurable failure modes, and engineering paths that survive real constraints.
             </p>
+            <div className="glass-dark border border-background/30 clip-corner-tl p-4 mb-6 text-background font-mono text-sm">
+              {portfolio.seeking}
+            </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {portfolio.quickLinks.map((item) => (
                 <div

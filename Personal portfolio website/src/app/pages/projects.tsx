@@ -1,4 +1,4 @@
-import { ExternalLink, FileText, Github, ShieldCheck, Terminal } from "lucide-react";
+import { ExternalLink, FileText, Github } from "lucide-react";
 import { portfolio } from "../content/portfolio";
 
 export function Projects() {
@@ -18,9 +18,20 @@ export function Projects() {
 
       <div className="grid grid-cols-12 gap-4 mb-8">
         <div className="col-span-12 lg:col-span-8 row-span-2 glass-dark border border-primary/20 clip-corner-all overflow-hidden group relative">
-          <div className="aspect-video overflow-hidden relative bg-gradient-to-br from-primary/15 via-transparent to-secondary/20 flex items-center justify-center">
-            <Terminal className="w-24 h-24 text-primary/70" />
+          <div className="aspect-video overflow-hidden relative bg-gradient-to-br from-primary/15 via-transparent to-secondary/20 p-6">
             <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent"></div>
+            <div className="relative z-10 h-full grid grid-cols-2 gap-3">
+              {portfolio.caseStudies[0].preview.map((item, index) => (
+                <div
+                  key={item}
+                  className={`glass-dark border border-border/70 p-4 font-mono text-xs tracking-wider flex items-end ${
+                    index % 2 === 0 ? "clip-corner-tl" : "clip-corner-br"
+                  }`}
+                >
+                  {item.toUpperCase()}
+                </div>
+              ))}
+            </div>
           </div>
           <div className="p-8 relative">
             <div className="circuit-pattern absolute inset-0 opacity-30"></div>
@@ -28,6 +39,7 @@ export function Projects() {
               <div className="inline-block glass border border-primary/30 px-3 py-1 clip-corner-br text-xs mb-3 font-mono text-primary">
                 PRIMARY.PROJECT
               </div>
+              <div className="text-xs text-muted-foreground font-mono mb-2">{portfolio.caseStudies[0].year}</div>
               <h2 className="text-2xl md:text-3xl mb-3 font-mono tracking-wider">{portfolio.caseStudies[0].title}</h2>
               <p className="text-muted-foreground mb-4 font-mono text-sm">{portfolio.caseStudies[0].summary}</p>
               <p className="text-muted-foreground mb-4 font-mono text-sm">{portfolio.caseStudies[0].details}</p>
@@ -40,6 +52,18 @@ export function Projects() {
               </div>
               <div className="glass border border-border clip-corner-tl p-4 text-sm text-muted-foreground font-mono mb-6">
                 {portfolio.caseStudies[0].whyItMatters}
+              </div>
+              <div className="mb-6">
+                <div className="text-xs text-primary font-mono tracking-wider mb-3">HIRING.SIGNAL</div>
+                <p className="text-sm text-muted-foreground font-mono mb-3">{portfolio.caseStudies[0].impact}</p>
+                <ul className="space-y-2">
+                  {portfolio.caseStudies[0].highlights.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-xs text-muted-foreground font-mono">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0"></div>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
               <a
                 href={portfolio.caseStudies[0].link}
@@ -62,14 +86,35 @@ export function Projects() {
                 index === 0 ? "clip-corner-tr" : "clip-corner-br"
               }`}
             >
-              <div className="aspect-video overflow-hidden relative bg-gradient-to-br from-secondary/15 via-transparent to-primary/15 flex items-center justify-center">
-                <ShieldCheck className="w-16 h-16 text-secondary/80" />
+              <div className="aspect-video overflow-hidden relative bg-gradient-to-br from-secondary/15 via-transparent to-primary/15 p-4">
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/80 to-transparent"></div>
+                <div className="relative z-10 grid grid-cols-2 gap-2 h-full">
+                  {project.preview.map((item, previewIndex) => (
+                    <div
+                      key={item}
+                      className={`glass-dark border border-border/70 p-3 text-[10px] font-mono tracking-wider flex items-end ${
+                        previewIndex % 2 === 0 ? "clip-corner-tl" : "clip-corner-br"
+                      }`}
+                    >
+                      {item.toUpperCase()}
+                    </div>
+                  ))}
+                </div>
               </div>
               <div className="p-5">
+                <div className="text-[10px] text-muted-foreground mb-2 font-mono">{project.year}</div>
                 <h3 className="mb-2 font-mono tracking-wider">{project.title}</h3>
                 <p className="text-sm text-muted-foreground mb-3 font-mono text-xs leading-relaxed">{project.summary}</p>
                 <p className="text-sm text-muted-foreground mb-3 font-mono text-xs leading-relaxed">{project.whyItMatters}</p>
+                <p className="text-sm text-muted-foreground mb-3 font-mono text-xs leading-relaxed">{project.impact}</p>
+                <ul className="space-y-1.5 mb-3">
+                  {project.highlights.slice(0, 2).map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-[10px] text-muted-foreground font-mono">
+                      <div className="w-1 h-1 bg-secondary rounded-full mt-1.5 flex-shrink-0"></div>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
                 <div className="flex flex-wrap gap-1.5 mb-3">
                   {project.tools.map((tag) => (
                     <span key={tag} className="glass border border-border px-2 py-0.5 clip-corner-tl text-xs font-mono">
@@ -180,7 +225,7 @@ export function Projects() {
           <div className="relative z-10">
             <h2 className="text-3xl md:text-4xl mb-4 font-mono tracking-wider text-background">ENGINEERING.MINDSET</h2>
             <p className="text-background/90 mb-6 font-mono text-sm max-w-xl">
-              These projects focus on what broke, why it broke, and how the system became more reliable.
+              These projects emphasize product usefulness, measurable failure modes, and the engineering tradeoffs needed to make AI systems credible.
             </p>
             <a
               href={portfolio.github}
@@ -208,6 +253,9 @@ export function Projects() {
             <div>
               <div className="text-3xl font-mono text-primary mb-1">{portfolio.researchReports.length}</div>
               <div className="text-xs text-muted-foreground font-mono">Research reports</div>
+            </div>
+            <div className="glass border border-border clip-corner-tl p-3 text-[10px] text-muted-foreground font-mono">
+              Featured projects now include impact language, delivery scope, and snapshot modules for faster recruiter scanning.
             </div>
           </div>
         </div>

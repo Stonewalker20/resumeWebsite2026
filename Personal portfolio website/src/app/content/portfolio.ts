@@ -25,10 +25,26 @@ export const portfolio = {
   resumePath: portfolioPaths.resume,
   updated: "March 2026",
   heroHeadline: "I build AI and machine-learning systems that hold up under real use.",
+  seeking:
+    "Seeking ML Engineer and Applied AI roles where product delivery, evaluation discipline, and reliability all matter.",
   heroBody:
     "Recent work spans a full-stack career intelligence product, an open-source LLM reliability framework, numerical fragility experiments for MLOps, and notebook-based NLP and optimization projects. I work across frontend, backend, modeling, and evaluation when the product needs all four.",
   summary:
     "Machine Learning Engineer / Applied AI Engineer with hands-on experience across full-stack product delivery, LLM evaluation, MLOps reliability, and transformer-based NLP. I build systems end to end, measure failure modes directly, and turn experiments into repeatable engineering work.",
+  proofPoints: [
+    {
+      label: "Current focus",
+      value: "Applied AI products, LLM reliability, and ML systems",
+    },
+    {
+      label: "Public repos",
+      value: "7 active GitHub projects spanning frontend, backend, and ML",
+    },
+    {
+      label: "Research base",
+      value: "4 report-backed projects across NLP, vision, and applied analytics",
+    },
+  ],
   quickLinks: [
     "full-stack AI products",
     "LLM evaluation and guardrails",
@@ -139,36 +155,63 @@ export const portfolio = {
   caseStudies: [
     {
       title: "SkillBridge",
+      year: "2026",
       summary:
         "Built a full-stack career intelligence platform for collecting evidence, confirming skills, analyzing job fit, and generating tailored resumes.",
       details:
         "Implemented a React/Vite frontend, FastAPI backend, MongoDB persistence, local transformer-backed semantic matching, and safe fallback behavior when models are unavailable.",
+      impact:
+        "Demonstrates end-to-end product ownership across interface design, backend APIs, document ingestion, AI-assisted matching, and PDF export.",
       whyItMatters:
         "Shows that I can ship AI product work across UI, API, data, and model logic instead of stopping at notebooks.",
+      highlights: [
+        "Evidence ingestion from text, PDF, and DOCX",
+        "Skill confirmations, job-fit analysis, and resume generation",
+        "Safe rule-based fallback when transformer models are unavailable",
+      ],
+      preview: ["Landing UI", "FastAPI routes", "MongoDB records", "Matching pipeline"],
       tools: ["React", "FastAPI", "MongoDB", "Transformers"],
       link: repoUrl("SkillBridge"),
       linkLabel: "View repo",
     },
     {
       title: "TrustStack",
+      year: "2026",
       summary:
         "Created an open-source evaluation framework for LLM reliability and guardrail effectiveness in agentic workflows.",
       details:
         "Measures prompt injection, groundedness, schema and tool reliability, and stability while producing metrics JSON, HTML reports, and a dashboard surface.",
+      impact:
+        "Frames LLM evaluation as operational risk measurement, not just benchmark accuracy, with outputs that teams can inspect and compare.",
       whyItMatters:
         "Moves beyond model demos into operational risk measurement for real AI systems.",
+      highlights: [
+        "Injection, groundedness, schema, and tool reliability suites",
+        "Reproducible JSON metrics and HTML report generation",
+        "Dashboard-ready output for leaderboard and monitoring workflows",
+      ],
+      preview: ["Eval harness", "Metrics JSON", "HTML report", "Dashboard MVP"],
       tools: ["LLM evaluation", "Guardrails", "Python", "Dashboard"],
       link: repoUrl("TrustStack"),
       linkLabel: "View repo",
     },
     {
       title: "Correct but Fragile",
+      year: "2026",
       summary:
         "Built a reproducible ML pipeline to quantify prediction drift under random seed and batch-size perturbations.",
       details:
         "Added deterministic controls, artifact-backed experiments, MLflow tracking, DVC versioning, Docker support, and CI-ready stability workflows.",
+      impact:
+        "Shows how to turn numerical stability from an academic concern into a measurable engineering gate for production ML workflows.",
       whyItMatters:
         "Accuracy is not enough if the system changes its predictions under normal operational variation.",
+      highlights: [
+        "Prediction-level drift checks across seeds and batch sizes",
+        "Artifact-backed runs with MLflow and DVC traceability",
+        "CI-ready structure for future stability gating",
+      ],
+      preview: ["Train sweep", "Prediction artifacts", "MLflow runs", "Drift comparisons"],
       tools: ["PyTorch", "MLflow", "DVC", "Docker"],
       link: repoUrl("numerical-fragility-mlops"),
       linkLabel: "View repo",
@@ -230,6 +273,32 @@ export const portfolio = {
         "Refactored the site into a framework-based frontend, multi-page static routes, and GitHub Actions deployment for a cleaner public presence.",
       tools: ["React", "TypeScript", "Vite", "GitHub Pages"],
       link: repoUrl("resumeWebsite2026"),
+    },
+  ],
+  buildTimeline: [
+    {
+      period: "2026",
+      title: "Portfolio and public positioning",
+      body:
+        "Rebuilt the portfolio as a React/Vite site on GitHub Pages with recruiter-facing contact, current projects, and cleaner deployment flow.",
+    },
+    {
+      period: "2026",
+      title: "SkillBridge product build",
+      body:
+        "Shipped a full-stack AI product covering evidence ingestion, skills data, job-fit analysis, and tailored resume generation.",
+    },
+    {
+      period: "2026",
+      title: "TrustStack reliability work",
+      body:
+        "Started an open-source LLM evaluation framework centered on guardrails, prompt injection, groundedness, and reproducible reporting.",
+    },
+    {
+      period: "2025-2026",
+      title: "ML systems and research base",
+      body:
+        "Built PyTorch, NLP, optimization, and computer vision projects that strengthened the modeling and experimentation side of the portfolio.",
     },
   ],
   researchReports: [
