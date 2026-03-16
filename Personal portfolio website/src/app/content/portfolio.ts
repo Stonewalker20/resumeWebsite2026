@@ -1,149 +1,228 @@
 const assetUrl = (relativePath: string) =>
   `${import.meta.env.BASE_URL}${relativePath.replace(/^\/+/, "")}`;
 
+const githubBase = "https://github.com/Stonewalker20";
+
 const portfolioPaths = {
-  github: "https://github.com/Stonewalker20",
+  github: githubBase,
   resume: assetUrl("Cordell_Stonecipher_Resume.pdf"),
 };
 
+const repoUrl = (repo: string) => `${githubBase}/${repo}`;
+
 export const portfolio = {
   name: "Cordell Stonecipher",
-  role: "Data Scientist / Machine Learning Engineer",
-  focus: "Systems & Reliability",
+  role: "Machine Learning Engineer / Applied AI Engineer",
+  focus: "Reliability, Evaluation, and Product Systems",
   github: portfolioPaths.github,
   resumePath: portfolioPaths.resume,
-  updated: "2026",
-  heroHeadline: "I build reliable machine-learning systems for real-world constraints.",
+  updated: "March 2026",
+  heroHeadline: "I build AI and machine-learning systems that hold up under real use.",
   heroBody:
-    "I combine applied ML with a hands-on systems background. My focus is turning messy inputs into stable pipelines, measuring outcomes with defensible evaluation, and diagnosing failure modes until results hold up under real operational constraints.",
+    "Recent work spans a full-stack career intelligence product, an open-source LLM reliability framework, numerical fragility experiments for MLOps, and notebook-based NLP and optimization projects. I work across frontend, backend, modeling, and evaluation when the product needs all four.",
   summary:
-    "Data Scientist / Machine Learning Engineer with a systems background. I build end-to-end ML pipelines, validate outcomes with defensible evaluation, and troubleshoot failure modes until systems are stable and repeatable.",
+    "Machine Learning Engineer / Applied AI Engineer with hands-on experience across full-stack product delivery, LLM evaluation, MLOps reliability, and transformer-based NLP. I build systems end to end, measure failure modes directly, and turn experiments into repeatable engineering work.",
   quickLinks: [
-    "end-to-end ML pipelines",
-    "evaluation and error analysis",
-    "repeatable automation",
-    "reliability under constraints",
+    "full-stack AI products",
+    "LLM evaluation and guardrails",
+    "MLOps reproducibility",
+    "transformer NLP and PyTorch",
   ],
   valueProps: [
     {
       title: "What I deliver",
-      body: "end-to-end ML pipelines, evaluation discipline, and reliable automation",
+      body: "repo-backed AI and ML systems that combine product UI, backend services, model logic, and evaluation",
     },
     {
       title: "What I optimize for",
-      body: "repeatability, clarity, stability under constraints, and documented handoff",
+      body: "reliability, useful metrics, clean interfaces, and work that can be reproduced after handoff",
     },
     {
-      title: "Domains",
-      body: "NLP, computer vision, time series, and applied analytics",
+      title: "Where I add value",
+      body: "Applied AI products, ML systems, MLOps, evaluation harnesses, and engineering-focused experimentation",
     },
   ],
   targetRoles: [
-    "Machine Learning Engineer: pipelines, evaluation, reliability, deployment-aware decisions",
-    "Data Scientist: modeling, experimentation, interpretation, and operational outcomes",
-    "Applied Research / ML Systems: rigorous comparisons, ablations, and practical constraints",
+    "Applied AI Engineer: ship product-facing AI features with sound evaluation and fallback behavior",
+    "Machine Learning Engineer: own training, pipelines, APIs, and deployment-aware engineering decisions",
+    "ML / AI Platform Engineer: build reliability tooling, evaluation harnesses, and reproducible workflows",
   ],
   strengths: [
-    "End-to-end execution: data prep, training, evaluation, and reporting",
-    "Failure-mode thinking: diagnose root causes instead of symptoms",
-    "Repeatability: controlled randomness, stable preprocessing, readable pipelines",
-    "Systems mindset: comfortable across software, data, and operational constraints",
+    "Full-stack execution across React, FastAPI, Python ML, and deployment workflows",
+    "Reliability mindset: measure drift, prompt injection, schema failures, and fragile behavior directly",
+    "Modeling depth: PyTorch, transformers, optimization, and NLP experimentation",
+    "Product framing: connect technical decisions to user workflows like job matching, evidence intake, and reporting",
   ],
   operatingStyle: [
-    "define data contracts and checks",
-    "control randomness for reproducibility",
-    "evaluate, inspect errors, and iterate",
-    "document so the work survives handoff",
+    "start from the user workflow and define what success actually means",
+    "build the data path, model path, and interface path together",
+    "measure real failure modes instead of relying on a single headline metric",
+    "leave behind reproducible repos, readable code, and clear documentation",
+  ],
+  projectDomains: [
+    "Full-stack AI",
+    "LLM reliability",
+    "MLOps",
+    "Transformers",
+    "Optimization",
+    "Applied NLP",
+  ],
+  recentStack: [
+    {
+      name: "Python + TypeScript",
+      detail: "backend APIs, ML pipelines, and frontend delivery",
+    },
+    {
+      name: "React + FastAPI + MongoDB",
+      detail: "user-facing products with API-driven workflows",
+    },
+    {
+      name: "PyTorch + Transformers + MLflow",
+      detail: "training, evaluation, and experiment tracking",
+    },
   ],
   skillGroups: [
     {
       title: "Languages",
-      items: ["Python", "SQL", "Java", "C++", "PHP"],
+      items: ["Python", "TypeScript", "JavaScript", "SQL", "HTML/CSS", "Shell", "LaTeX"],
     },
     {
-      title: "ML / Data",
+      title: "ML / AI",
       items: [
         "PyTorch",
-        "TensorFlow",
-        "scikit-learn",
-        "Pandas",
-        "NumPy",
         "Transformers",
-        "CRF",
-        "CNN",
-        "YOLOv8",
-        "LSTM",
-        "GRU",
-        "ARIMA",
-        "ETS",
+        "Hugging Face",
+        "scikit-learn",
+        "DistilBERT",
+        "Semantic matching",
+        "Skill extraction",
+        "Prompt injection evaluation",
+        "Groundedness testing",
       ],
     },
     {
-      title: "Engineering",
+      title: "Product / Backend",
       items: [
-        "Git",
-        "Linux",
-        "Jupyter",
-        "REST APIs",
+        "React",
+        "Vite",
+        "React Router",
+        "Tailwind CSS",
         "FastAPI",
-        "Flask",
-        "Django",
-        "Windows",
-        "macOS",
+        "MongoDB",
+        "Pydantic",
+        "REST APIs",
+        "PDF/DOCX ingestion",
       ],
     },
     {
-      title: "Methods",
+      title: "MLOps / Reliability",
       items: [
-        "Evaluation",
-        "Error analysis",
-        "Ablations",
-        "Model compression",
-        "Pruning",
-        "Distillation",
-        "Quantization",
-        "Data validation",
-        "Automation",
-        "BAS / Controls",
+        "Docker",
+        "DVC",
+        "MLflow",
+        "GitHub Actions",
+        "Experiment tracking",
+        "Deterministic training",
+        "Drift analysis",
+        "Schema validation",
+        "Guardrails",
       ],
     },
   ],
   caseStudies: [
     {
-      title: "ADE Detection (NLP)",
+      title: "SkillBridge",
       summary:
-        "Built a cross-domain sequence tagging pipeline with stable preprocessing and defensible evaluation.",
+        "Built a full-stack career intelligence platform for collecting evidence, confirming skills, analyzing job fit, and generating tailored resumes.",
       details:
-        "Focused on label harmonization, token alignment, and error analysis so results held up across clean and noisy text sources.",
+        "Implemented a React/Vite frontend, FastAPI backend, MongoDB persistence, local transformer-backed semantic matching, and safe fallback behavior when models are unavailable.",
       whyItMatters:
-        "Noisy text pipelines fail silently. Evaluation discipline prevents false confidence.",
-      tools: ["NLP", "Transformers", "Error analysis"],
-      link: assetUrl("reports/crossDomain_ADE_report.pdf"),
-      linkLabel: "Open report",
+        "Shows that I can ship AI product work across UI, API, data, and model logic instead of stopping at notebooks.",
+      tools: ["React", "FastAPI", "MongoDB", "Transformers"],
+      link: repoUrl("SkillBridge"),
+      linkLabel: "View repo",
     },
     {
-      title: "Algorithmic Trading Data Pipeline",
+      title: "TrustStack",
       summary:
-        "Designed an incremental data update workflow with guardrails that prevents corruption at scale.",
+        "Created an open-source evaluation framework for LLM reliability and guardrail effectiveness in agentic workflows.",
       details:
-        "Built around validation checks, safe updates, and repeatable modeling inputs for time-series work.",
+        "Measures prompt injection, groundedness, schema and tool reliability, and stability while producing metrics JSON, HTML reports, and a dashboard surface.",
       whyItMatters:
-        "Pipeline reliability beats one good run. Safe updates keep models trustworthy over time.",
-      tools: ["Python", "Pandas", "Automation"],
-      link: portfolioPaths.github,
-      linkLabel: "View GitHub",
+        "Moves beyond model demos into operational risk measurement for real AI systems.",
+      tools: ["LLM evaluation", "Guardrails", "Python", "Dashboard"],
+      link: repoUrl("TrustStack"),
+      linkLabel: "View repo",
     },
     {
-      title: "Deep Learning Compression",
+      title: "Correct but Fragile",
       summary:
-        "Compared pruning, distillation, and quantization with ablation discipline and latency awareness.",
+        "Built a reproducible ML pipeline to quantify prediction drift under random seed and batch-size perturbations.",
       details:
-        "Framed compression choices against deployment constraints like speed, memory, and power instead of accuracy alone.",
+        "Added deterministic controls, artifact-backed experiments, MLflow tracking, DVC versioning, Docker support, and CI-ready stability workflows.",
       whyItMatters:
-        "Performance claims only matter if they survive deployment constraints.",
-      tools: ["CNN", "Ablations", "Latency"],
-      link: assetUrl("reports/YOLOv8_report.pdf"),
-      linkLabel: "Open report",
+        "Accuracy is not enough if the system changes its predictions under normal operational variation.",
+      tools: ["PyTorch", "MLflow", "DVC", "Docker"],
+      link: repoUrl("numerical-fragility-mlops"),
+      linkLabel: "View repo",
+    },
+  ],
+  githubProjects: [
+    {
+      name: "SkillBridge",
+      tagline: "Full-stack career intelligence platform for skill evidence, job-fit analysis, and tailored resume generation.",
+      details:
+        "React/Vite frontend, FastAPI backend, MongoDB persistence, transformer-backed matching, and file ingestion for PDF and DOCX evidence.",
+      tools: ["TypeScript", "Python", "FastAPI", "MongoDB"],
+      link: repoUrl("SkillBridge"),
+    },
+    {
+      name: "TrustStack",
+      tagline: "Open-source framework for LLM reliability and guardrail effectiveness.",
+      details:
+        "Evaluates prompt injection, groundedness, schema and tool reliability, and stability with reproducible reports and a dashboard MVP.",
+      tools: ["Python", "LLM eval", "Guardrails", "HTML reports"],
+      link: repoUrl("TrustStack"),
+    },
+    {
+      name: "numerical-fragility-mlops",
+      tagline: "Operational stability project that tests whether a model can be correct but still fragile.",
+      details:
+        "Uses deterministic training, MLflow, DVC, Docker, and comparison artifacts to quantify reproducibility drift.",
+      tools: ["PyTorch", "MLflow", "DVC", "Docker"],
+      link: repoUrl("numerical-fragility-mlops"),
+    },
+    {
+      name: "optimization-in-deep-learning",
+      tagline: "Notebook experiments on learning rates, optimization stability, generalization, and concept drift.",
+      details:
+        "Compares optimizer behavior and shows how training choices and data shift affect outcomes in practice.",
+      tools: ["PyTorch", "Optimization", "Concept drift", "Notebook"],
+      link: repoUrl("optimization-in-deep-learning"),
+    },
+    {
+      name: "pytorch-regression-classification",
+      tagline: "End-to-end PyTorch work for regression and multi-class classification on high-dimensional tabular data.",
+      details:
+        "Implements framework-native MLP models with early stopping, scheduling, gradient clipping, and reproducible prediction outputs.",
+      tools: ["PyTorch", "Tabular ML", "AdamW", "Notebook"],
+      link: repoUrl("pytorch-regression-classification"),
+    },
+    {
+      name: "sentiment-analysis-distilbert",
+      tagline: "Fine-tuned DistilBERT for binary sentiment classification on IMDB reviews.",
+      details:
+        "Covers tokenization, transfer learning, evaluation metrics, and inference on custom inputs using Hugging Face tooling.",
+      tools: ["DistilBERT", "Transformers", "PyTorch", "NLP"],
+      link: repoUrl("sentiment-analysis-distilbert"),
+    },
+    {
+      name: "resumeWebsite2026",
+      tagline: "Portfolio and resume site deployed with React/Vite and GitHub Pages.",
+      details:
+        "Refactored the site into a framework-based frontend, multi-page static routes, and GitHub Actions deployment for a cleaner public presence.",
+      tools: ["React", "TypeScript", "Vite", "GitHub Pages"],
+      link: repoUrl("resumeWebsite2026"),
     },
   ],
   researchReports: [
@@ -211,5 +290,5 @@ export const portfolio = {
     },
   ],
   longTermDirection:
-    "Long term, I want to build a product that helps people in a practical way. I am drawn to work where better tools mean better outcomes, especially in health and safety.",
+    "Long term, I want to build practical AI products that are both useful and trustworthy, especially where reliability matters as much as raw model performance.",
 };

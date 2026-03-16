@@ -16,15 +16,15 @@ export function Resume() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-background/80 font-mono">
               <span className="inline-flex items-center gap-2">
                 <Target className="w-4 h-4" />
-                Reliable ML systems for real-world constraints
+                Reliable AI and ML systems for real-world constraints
               </span>
               <span className="inline-flex items-center gap-2">
                 <Sparkles className="w-4 h-4" />
-                End-to-end pipelines • defensible evaluation
+                Full-stack delivery • defensible evaluation
               </span>
               <span className="inline-flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4" />
-                Repeatability • validation • documented handoff
+                Fallback paths • reproducibility • documented handoff
               </span>
               <span className="inline-flex items-center gap-2">
                 <Github className="w-4 h-4" />

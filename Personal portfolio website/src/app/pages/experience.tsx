@@ -14,7 +14,7 @@ export function Experience() {
           ENGINEERING <span className="text-primary">PROFILE</span>
         </h1>
         <p className="text-xl text-muted-foreground max-w-2xl font-mono">
-          Target roles, strengths, and the workflow behind how I build stable ML systems.
+          Target roles, strengths, and the workflow behind how I build reliable AI and ML systems.
         </p>
       </div>
 
@@ -99,8 +99,8 @@ export function Experience() {
             </div>
             <h2 className="text-3xl md:text-4xl mb-4 font-mono tracking-wider text-background">WHY THIS FITS</h2>
             <p className="text-background/90 mb-6 font-mono text-sm">
-              I focus on the gap between "a model that runs" and "a system that stays correct": clean data contracts,
-              stable pipelines, and evaluation you can defend.
+              I focus on the gap between "a demo that works once" and "a system that stays useful": product-aware workflows,
+              measurable failure modes, and engineering paths that survive real constraints.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {portfolio.quickLinks.map((item) => (

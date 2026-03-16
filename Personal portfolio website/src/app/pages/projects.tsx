@@ -1,4 +1,4 @@
-import { FileText, Github, ShieldCheck, Terminal } from "lucide-react";
+import { ExternalLink, FileText, Github, ShieldCheck, Terminal } from "lucide-react";
 import { portfolio } from "../content/portfolio";
 
 export function Projects() {
@@ -12,7 +12,7 @@ export function Projects() {
           FEATURED <span className="text-primary">WORK</span>
         </h1>
         <p className="text-xl text-muted-foreground max-w-2xl font-mono">
-          Production-minded ML, report-backed case studies, and research work with clear engineering takeaways.
+          Featured repo case studies, a full GitHub project index, and research reports that show how the work evolved.
         </p>
       </div>
 
@@ -94,6 +94,47 @@ export function Projects() {
 
       <div className="mb-12">
         <h2 className="text-3xl mb-6 font-mono tracking-wider">
+          ALL.GITHUB <span className="text-primary">REPOS</span>
+        </h2>
+        <div className="grid grid-cols-12 gap-4">
+          {portfolio.githubProjects.map((project, index) => (
+            <a
+              key={project.name}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`col-span-12 md:col-span-6 xl:col-span-4 glass border border-border overflow-hidden group relative ${
+                index % 3 === 0 ? "clip-corner-tl" : index % 3 === 1 ? "clip-corner-tr" : "clip-corner-br"
+              }`}
+            >
+              <div className="p-6 relative">
+                <div className="grid-pattern absolute inset-0 opacity-20"></div>
+                <div className="relative z-10">
+                  <div className="flex items-start justify-between gap-3 mb-3">
+                    <div>
+                      <div className="font-mono text-xs text-primary mb-1 tracking-wider">REPOSITORY</div>
+                      <h3 className="font-mono tracking-wider break-words">{project.name}</h3>
+                    </div>
+                    <ExternalLink className="w-4 h-4 text-primary flex-shrink-0" />
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3 font-mono text-xs leading-relaxed">{project.tagline}</p>
+                  <p className="text-sm text-muted-foreground mb-4 font-mono text-xs leading-relaxed">{project.details}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tools.map((tool) => (
+                      <span key={tool} className="glass-dark border border-border px-2.5 py-1 clip-corner-tl text-xs font-mono">
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div className="mb-12">
+        <h2 className="text-3xl mb-6 font-mono tracking-wider">
           RESEARCH <span className="text-primary">REPORTS</span>
         </h2>
         <div className="grid grid-cols-12 gap-4">
@@ -157,16 +198,16 @@ export function Projects() {
           <div className="font-mono text-xs text-primary mb-4 tracking-wider">AT.A.GLANCE</div>
           <div className="space-y-4">
             <div>
-              <div className="text-3xl font-mono text-primary mb-1">3</div>
-              <div className="text-xs text-muted-foreground font-mono">Case studies</div>
+              <div className="text-3xl font-mono text-primary mb-1">{portfolio.caseStudies.length}</div>
+              <div className="text-xs text-muted-foreground font-mono">Featured repos</div>
             </div>
             <div>
-              <div className="text-3xl font-mono text-secondary mb-1">4</div>
+              <div className="text-3xl font-mono text-secondary mb-1">{portfolio.githubProjects.length}</div>
+              <div className="text-xs text-muted-foreground font-mono">GitHub repos</div>
+            </div>
+            <div>
+              <div className="text-3xl font-mono text-primary mb-1">{portfolio.researchReports.length}</div>
               <div className="text-xs text-muted-foreground font-mono">Research reports</div>
-            </div>
-            <div>
-              <div className="text-3xl font-mono text-primary mb-1">4</div>
-              <div className="text-xs text-muted-foreground font-mono">Primary domains</div>
             </div>
           </div>
         </div>

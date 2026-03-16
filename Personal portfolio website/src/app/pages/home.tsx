@@ -41,27 +41,27 @@ export function Home() {
                 <Download className="w-4 h-4" />
                 DOWNLOAD.RESUME
               </a>
+              <a
+                href={portfolio.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 glass border border-border px-6 py-3 clip-corner-br hover:border-primary/50 transition-all font-mono tracking-wider"
+              >
+                <Github className="w-4 h-4" />
+                GITHUB.REPOS
+              </a>
             </div>
           </div>
         </div>
 
         <div className="col-span-12 lg:col-span-4 lg:row-start-1 glass border border-border clip-corner-all p-6 relative overflow-hidden">
           <div className="scan-lines h-full">
-            <div className="font-mono text-xs text-primary mb-4 tracking-wider">CORE.STACK</div>
+            <div className="font-mono text-xs text-primary mb-4 tracking-wider">RECENT.STACK</div>
             <div className="space-y-3">
-              {[
-                { name: "Python / SQL", level: 94 },
-                { name: "PyTorch / Transformers", level: 91 },
-                { name: "Pipelines / Validation", level: 96 },
-              ].map((skill) => (
-                <div key={skill.name}>
-                  <div className="flex justify-between text-xs mb-1 font-mono">
-                    <span>{skill.name}</span>
-                    <span className="text-primary">{skill.level}%</span>
-                  </div>
-                  <div className="h-1 bg-muted clip-corner-tl overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-primary to-secondary" style={{ width: `${skill.level}%` }}></div>
-                  </div>
+              {portfolio.recentStack.map((skill) => (
+                <div key={skill.name} className="glass-dark border border-border clip-corner-tl p-3">
+                  <div className="text-xs mb-1 font-mono text-primary">{skill.name.toUpperCase()}</div>
+                  <div className="text-xs text-muted-foreground font-mono">{skill.detail}</div>
                 </div>
               ))}
             </div>
@@ -70,15 +70,22 @@ export function Home() {
 
         <div className="col-span-12 lg:col-span-4 lg:row-start-2 glass-dark border border-secondary/20 clip-corner-br p-6 holographic">
           <div className="font-mono text-xs text-secondary mb-4 tracking-wider">SYSTEM.METRICS</div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-3 gap-4">
             <div>
-              <div className="text-3xl font-mono text-primary mb-1">3</div>
-              <div className="text-xs text-muted-foreground font-mono">CASE.STUDIES</div>
+              <div className="text-3xl font-mono text-primary mb-1">{portfolio.caseStudies.length}</div>
+              <div className="text-xs text-muted-foreground font-mono">FEATURED</div>
             </div>
             <div>
-              <div className="text-3xl font-mono text-secondary mb-1">4</div>
+              <div className="text-3xl font-mono text-secondary mb-1">{portfolio.githubProjects.length}</div>
+              <div className="text-xs text-muted-foreground font-mono">REPOS</div>
+            </div>
+            <div>
+              <div className="text-3xl font-mono text-primary mb-1">{portfolio.researchReports.length}</div>
               <div className="text-xs text-muted-foreground font-mono">REPORTS</div>
             </div>
+          </div>
+          <div className="mt-4 glass border border-border clip-corner-tl p-3 font-mono text-xs text-muted-foreground">
+            Public GitHub work now drives the portfolio content instead of placeholder projects.
           </div>
         </div>
       </div>
@@ -114,10 +121,10 @@ export function Home() {
                 </div>
                 <h3 className="text-2xl font-mono tracking-wider mb-2">PROJECT.ARCHIVE</h3>
                 <p className="text-muted-foreground mb-4 font-mono text-sm">
-                  Case studies • research reports • engineering evidence
+                  Featured builds • all GitHub repos • older research reports
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {["NLP", "Time series", "Computer vision", "Evaluation"].map((tech) => (
+                  {portfolio.projectDomains.slice(0, 4).map((tech) => (
                     <span key={tech} className="glass border border-border px-3 py-1 clip-corner-tl text-xs font-mono">
                       {tech}
                     </span>
@@ -133,7 +140,7 @@ export function Home() {
             </div>
           </div>
         </Link>
-
+        
         <Link
           to={pagePaths.resume}
           className="col-span-12 md:col-span-5 glass border border-border clip-corner-tl p-6 hover:border-secondary/50 transition-all group"
@@ -142,7 +149,7 @@ export function Home() {
             <BookOpen className="w-6 h-6 text-secondary" />
           </div>
           <h3 className="font-mono tracking-wider mb-2">CREDENTIALS.DB</h3>
-          <p className="text-muted-foreground text-sm mb-4 font-mono">Summary • target roles • technical toolkit</p>
+          <p className="text-muted-foreground text-sm mb-4 font-mono">Summary • current stack • repo-backed skills</p>
           <span className="inline-flex items-center gap-2 text-secondary text-sm group-hover:gap-3 transition-all font-mono">
             QUERY <ArrowRight className="w-4 h-4" />
           </span>
@@ -172,7 +179,7 @@ export function Home() {
           <div className="relative z-10">
             <h2 className="text-3xl font-mono tracking-wider mb-4 text-background">QUICK.ACCESS</h2>
             <p className="text-background/80 mb-6 font-mono text-sm">
-              Resume PDF, GitHub, and a condensed profile built from the original site content.
+              Resume PDF, GitHub, and a repo-backed snapshot of current AI and ML work.
             </p>
             <div className="flex flex-wrap gap-3">
               <a
@@ -212,11 +219,11 @@ export function Home() {
               <div className="w-1.5 h-1.5 bg-primary rounded-full pulse-glow"></div>
               STATUS: OPERATIONAL
             </span>
-            <span>UPTIME: 99.9%</span>
+            <span>GITHUB.REPOS: {portfolio.githubProjects.length}</span>
           </div>
           <div className="flex items-center gap-4">
             <span>FOCUS: {portfolio.focus.toUpperCase()}</span>
-            <span className="text-primary">UPDATED: {portfolio.updated}</span>
+            <span className="text-primary">UPDATED: {portfolio.updated.toUpperCase()}</span>
           </div>
         </div>
       </div>
