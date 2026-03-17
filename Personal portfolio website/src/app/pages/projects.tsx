@@ -21,8 +21,8 @@ export function Projects() {
           <div className="aspect-video overflow-hidden relative bg-gradient-to-br from-primary/15 via-transparent to-secondary/20 p-6">
             <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent"></div>
             {portfolio.caseStudies[0].previewImages ? (
-              <div className="relative z-10 h-full grid grid-cols-2 gap-3">
-                <div className="col-span-2 overflow-hidden border border-border/70 clip-corner-tl bg-background/20 p-3">
+              <div className="relative z-10 h-full grid grid-cols-1 md:grid-cols-3 gap-3">
+                <div className="overflow-hidden border border-border/70 clip-corner-tl bg-background/20 p-3">
                   <div className="w-full h-full bg-white/95 overflow-hidden border border-white/60 shadow-xl">
                     <img
                       src={portfolio.caseStudies[0].previewImages[0].src}
