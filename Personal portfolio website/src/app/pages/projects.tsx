@@ -195,13 +195,15 @@ export function Projects() {
                 index % 3 === 0 ? "clip-corner-tl" : index % 3 === 1 ? "clip-corner-tr" : "clip-corner-br"
               }`}
             >
-              <div className="aspect-video overflow-hidden relative bg-gradient-to-br from-primary/10 via-transparent to-secondary/10">
-                <img
-                  src={report.thumbnail}
-                  alt={`${report.title} PDF preview`}
-                  className="w-full h-full object-cover object-top"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent"></div>
+              <div className="aspect-video overflow-hidden relative bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 p-4 flex items-center justify-center">
+                <div className="w-full h-full max-w-[280px] bg-white border border-white/60 shadow-2xl overflow-hidden">
+                  <img
+                    src={report.thumbnail}
+                    alt={`${report.title} PDF preview`}
+                    className="w-full h-full object-contain object-top bg-white"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/10 to-transparent"></div>
                 <div className="scan-lines absolute inset-0"></div>
               </div>
               <div className="p-6 relative">
