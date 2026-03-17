@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, Outlet, useLocation } from "react-router";
 import { Download, Github, Linkedin, Mail, Menu, Terminal, X } from "lucide-react";
 import { portfolio } from "../content/portfolio";
@@ -12,6 +12,10 @@ export function Layout() {
     location.pathname.startsWith(basePath) && basePath
       ? location.pathname.slice(basePath.length) || "/"
       : location.pathname;
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [location.pathname]);
 
   const navItems = [
     { path: pagePaths.home, matches: [pagePaths.home, pagePaths.homeFile], label: "Home" },
