@@ -308,24 +308,28 @@ export const portfolio = {
       body:
         "Weak supervision and classical NLP pipelines using Reddit data, with careful preprocessing, TF-IDF features, and linear models.",
       link: assetUrl("reports/ADE_redditmining_report.pdf"),
+      thumbnail: assetUrl("reports/thumbnails/ADE_redditmining_report.pdf.png"),
     },
     {
       title: "Cross-Domain ADE Extraction",
       body:
         "Sequence labeling across clean and noisy domains, comparing CRFs and transformer models under real domain shift.",
       link: assetUrl("reports/crossDomain_ADE_report.pdf"),
+      thumbnail: assetUrl("reports/thumbnails/crossDomain_ADE_report.pdf.png"),
     },
     {
       title: "Cancer Mortality Prediction (OLS Regression)",
       body:
         "Interpretable regression with diagnostics, assumption checking, and disciplined feature handling.",
       link: assetUrl("reports/OLS_Regression.pdf"),
+      thumbnail: assetUrl("reports/thumbnails/OLS_Regression.pdf.png"),
     },
     {
       title: "Military Asset Detection (YOLOv8)",
       body:
         "End-to-end computer vision pipeline covering exploration, training, and evaluation on imbalanced data.",
       link: assetUrl("reports/YOLOv8_report.pdf"),
+      thumbnail: assetUrl("reports/thumbnails/YOLOv8_report.pdf.png"),
     },
   ],
   hobbies: [
