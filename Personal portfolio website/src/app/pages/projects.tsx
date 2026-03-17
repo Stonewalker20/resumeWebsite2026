@@ -195,25 +195,25 @@ export function Projects() {
                 index % 3 === 0 ? "clip-corner-tl" : index % 3 === 1 ? "clip-corner-tr" : "clip-corner-br"
               }`}
             >
-              <div className="aspect-video overflow-hidden relative bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 p-4 flex items-center justify-center">
-                <div className="w-full h-full max-w-[280px] bg-white border border-white/60 shadow-2xl overflow-hidden">
+              <div className="h-40 md:h-44 overflow-hidden relative bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 p-3 flex items-center justify-center">
+                <div className="w-[78%] h-[92%] bg-white border border-white/60 shadow-2xl overflow-hidden">
                   <img
                     src={report.thumbnail}
                     alt={`${report.title} PDF preview`}
-                    className="w-full h-full object-contain object-top bg-white"
+                    className="w-full h-full object-cover object-top scale-[1.14] origin-top bg-white"
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/10 to-transparent"></div>
                 <div className="scan-lines absolute inset-0"></div>
               </div>
-              <div className="p-6 relative">
+              <div className="p-4 relative">
                 <div className="grid-pattern absolute inset-0 opacity-20"></div>
                 <div className="relative z-10">
                   <div className="flex items-start justify-between mb-2">
                     <h3 className="font-mono tracking-wider">{report.title}</h3>
                     <span className="text-xs font-mono text-muted-foreground">PDF</span>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-4 font-mono text-xs">{report.body}</p>
+                  <p className="text-muted-foreground mb-3 font-mono text-[11px] leading-relaxed">{report.body}</p>
                   <span className="text-xs text-primary font-mono flex items-center gap-1">
                     <FileText className="w-3 h-3" />
                     OPEN.REPORT
