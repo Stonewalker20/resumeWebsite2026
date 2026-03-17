@@ -189,9 +189,7 @@ export function Projects() {
               href={report.link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`${
-                index === 0 ? "col-span-12 md:col-span-7" : index === 1 ? "col-span-12 md:col-span-5" : "col-span-12 md:col-span-6"
-              } glass-dark border border-border overflow-hidden group relative ${
+              className={`col-span-12 md:col-span-6 glass-dark border border-border overflow-hidden group relative ${
                 index % 3 === 0 ? "clip-corner-tl" : index % 3 === 1 ? "clip-corner-tr" : "clip-corner-br"
               }`}
             >
