@@ -20,18 +20,40 @@ export function Projects() {
         <div className="col-span-12 lg:col-span-8 row-span-2 glass-dark border border-primary/20 clip-corner-all overflow-hidden group relative">
           <div className="aspect-video overflow-hidden relative bg-gradient-to-br from-primary/15 via-transparent to-secondary/20 p-6">
             <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent"></div>
-            <div className="relative z-10 h-full grid grid-cols-2 gap-3">
-              {portfolio.caseStudies[0].preview.map((item, index) => (
-                <div
-                  key={item}
-                  className={`glass-dark border border-border/70 p-4 font-mono text-xs tracking-wider flex items-end ${
-                    index % 2 === 0 ? "clip-corner-tl" : "clip-corner-br"
-                  }`}
-                >
-                  {item.toUpperCase()}
+            {portfolio.caseStudies[0].previewImages ? (
+              <div className="relative z-10 h-full grid grid-cols-2 gap-3">
+                <div className="col-span-2 overflow-hidden border border-border/70 clip-corner-tl bg-background/30">
+                  <img
+                    src={portfolio.caseStudies[0].previewImages[0].src}
+                    alt={portfolio.caseStudies[0].previewImages[0].alt}
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
-              ))}
-            </div>
+                {portfolio.caseStudies[0].previewImages.slice(1).map((image, index) => (
+                  <div
+                    key={image.src}
+                    className={`overflow-hidden border border-border/70 bg-background/30 ${
+                      index === 0 ? "clip-corner-br" : "clip-corner-tl"
+                    }`}
+                  >
+                    <img src={image.src} alt={image.alt} className="w-full h-full object-cover object-top" />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="relative z-10 h-full grid grid-cols-2 gap-3">
+                {portfolio.caseStudies[0].preview.map((item, index) => (
+                  <div
+                    key={item}
+                    className={`glass-dark border border-border/70 p-4 font-mono text-xs tracking-wider flex items-end ${
+                      index % 2 === 0 ? "clip-corner-tl" : "clip-corner-br"
+                    }`}
+                  >
+                    {item.toUpperCase()}
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
           <div className="p-8 relative">
             <div className="circuit-pattern absolute inset-0 opacity-30"></div>

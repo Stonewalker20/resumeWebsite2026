@@ -170,6 +170,20 @@ export const portfolio = {
         "Skill confirmations, job-fit analysis, and resume generation",
         "Safe rule-based fallback when transformer models are unavailable",
       ],
+      previewImages: [
+        {
+          src: assetUrl("images/SB_LandingPage.png"),
+          alt: "SkillBridge landing page",
+        },
+        {
+          src: assetUrl("images/SB_Dashboard.png"),
+          alt: "SkillBridge dashboard",
+        },
+        {
+          src: assetUrl("images/SB_Analytics.png"),
+          alt: "SkillBridge analytics view",
+        },
+      ],
       preview: ["Landing UI", "FastAPI routes", "MongoDB records", "Matching pipeline"],
       tools: ["React", "FastAPI", "MongoDB", "Transformers"],
       link: repoUrl("SkillBridge"),
