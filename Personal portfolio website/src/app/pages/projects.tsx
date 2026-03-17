@@ -18,11 +18,11 @@ export function Projects() {
 
       <div className="grid grid-cols-12 gap-4 mb-8">
         <div className="col-span-12 lg:col-span-8 row-span-2 glass-dark border border-primary/20 clip-corner-all overflow-hidden group relative">
-          <div className="aspect-video overflow-hidden relative bg-gradient-to-br from-primary/15 via-transparent to-secondary/20 p-6">
+          <div className="aspect-[4/3] md:aspect-[16/10] overflow-hidden relative bg-gradient-to-br from-primary/15 via-transparent to-secondary/20 p-5 md:p-6">
             <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent"></div>
             {portfolio.caseStudies[0].previewImages ? (
-              <div className="relative z-10 h-full grid grid-cols-1 md:grid-cols-3 gap-3">
-                <div className="overflow-hidden border border-border/70 clip-corner-tl bg-background/20 p-3">
+              <div className="relative z-10 h-full grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] md:grid-rows-2 gap-3">
+                <div className="overflow-hidden border border-border/70 clip-corner-tl bg-background/20 p-3 md:p-4 md:row-span-2 min-h-0">
                   <div className="w-full h-full bg-white/95 overflow-hidden border border-white/60 shadow-xl">
                     <img
                       src={portfolio.caseStudies[0].previewImages[0].src}
@@ -36,7 +36,7 @@ export function Projects() {
                     key={image.src}
                     className={`overflow-hidden border border-border/70 bg-background/20 p-2 ${
                       index === 0 ? "clip-corner-br" : "clip-corner-tl"
-                    }`}
+                    } min-h-0`}
                   >
                     <div className="w-full h-full bg-white/95 overflow-hidden border border-white/60 shadow-lg">
                       <img src={image.src} alt={image.alt} className="w-full h-full object-contain object-center bg-white" />
