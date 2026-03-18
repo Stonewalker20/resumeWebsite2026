@@ -27,7 +27,7 @@ export function Projects() {
                     <img
                       src={portfolio.caseStudies[0].previewImages[0].src}
                       alt={portfolio.caseStudies[0].previewImages[0].alt}
-                      className="w-full h-full object-cover object-center bg-white"
+                      className="w-full h-full object-cover object-center bg-white scale-[1.08] md:scale-[1.12] transform-gpu"
                     />
                   </div>
                 </div>
@@ -44,7 +44,11 @@ export function Projects() {
                           index === 0 ? "aspect-[3832/1834]" : "aspect-[3364/1838]"
                         }`}
                       >
-                        <img src={image.src} alt={image.alt} className="w-full h-full object-cover object-center bg-white" />
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-full object-cover object-center bg-white scale-[1.1] md:scale-[1.15] transform-gpu"
+                        />
                       </div>
                     </div>
                   ))}
