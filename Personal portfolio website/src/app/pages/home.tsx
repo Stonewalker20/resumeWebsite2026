@@ -57,7 +57,7 @@ export function Home() {
         <div className="mesh-gradient absolute inset-0 opacity-60"></div>
         <div className="relative z-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div className="font-mono text-xs tracking-wider text-muted-foreground">
-            <span className="text-primary">QUICK.CHAT</span> Recruiter outreach, project walkthroughs, and ML/AI role conversations.
+            <span className="text-primary">QUICK.CHAT</span> Excited for what we may build together.
           </div>
           <a
             href={portfolio.schedulingPath}
