@@ -233,6 +233,84 @@ export function Home() {
         ))}
       </div>
 
+      <div className="mb-8">
+        <div className="mb-6">
+          <div className="inline-block glass border border-primary/30 px-4 py-2 clip-corner-tl text-sm font-mono tracking-wider text-primary mb-4">
+            WHAT.YOU.GET
+          </div>
+          <h2 className="text-3xl md:text-5xl mb-4 font-mono tracking-tight">
+            WHY <span className="text-primary">TEAMS REACH OUT</span>
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-3xl font-mono">
+            The strongest fit is usually a team that wants someone who can move between product needs, engineering detail, and ML reliability without losing the bigger picture.
+          </p>
+        </div>
+        <div className="grid grid-cols-12 gap-4">
+          {portfolio.valueProps.map((item, index) => (
+            <div
+              key={item.title}
+              className={`col-span-12 md:col-span-4 glass-dark border border-border p-6 relative overflow-hidden ${
+                index === 0 ? "clip-corner-tl" : index === 1 ? "clip-corner-tr" : "clip-corner-br"
+              }`}
+            >
+              <div className="grid-pattern absolute inset-0 opacity-20"></div>
+              <div className="relative z-10">
+                <div className="text-xs font-mono text-primary mb-3 tracking-wider">{item.title.toUpperCase()}</div>
+                <p className="text-sm text-muted-foreground font-mono leading-relaxed">{item.body}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="mb-8">
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between mb-6">
+          <div>
+            <div className="inline-block glass border border-primary/30 px-4 py-2 clip-corner-tl text-sm font-mono tracking-wider text-primary mb-4">
+              FEATURED.SNAPSHOTS
+            </div>
+            <h2 className="text-3xl md:text-5xl mb-3 font-mono tracking-tight">
+              PROOF OF <span className="text-primary">HOW I WORK</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl font-mono">
+              A quick preview of the projects that best show how I build, evaluate, and deliver.
+            </p>
+          </div>
+          <Link
+            to={pagePaths.projects}
+            className="inline-flex items-center gap-2 glass border border-border px-5 py-3 clip-corner-tl hover:border-primary/50 transition-colors font-mono text-sm tracking-wider"
+          >
+            VIEW.ALL.PROJECTS
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+        <div className="grid grid-cols-12 gap-4">
+          {portfolio.caseStudies.map((study, index) => (
+            <div
+              key={study.title}
+              className={`col-span-12 md:col-span-4 glass border border-border p-6 relative overflow-hidden ${
+                index === 0 ? "clip-corner-tl" : index === 1 ? "clip-corner-tr" : "clip-corner-br"
+              }`}
+            >
+              <div className="circuit-pattern absolute inset-0 opacity-20"></div>
+              <div className="relative z-10">
+                <div className="text-xs font-mono text-muted-foreground mb-2">{study.year}</div>
+                <h3 className="text-xl font-mono tracking-wider mb-3">{study.title}</h3>
+                <p className="text-sm text-muted-foreground font-mono leading-relaxed mb-3">{study.summary}</p>
+                <p className="text-sm text-muted-foreground font-mono leading-relaxed mb-4">{study.whyItMatters}</p>
+                <div className="flex flex-wrap gap-2">
+                  {study.tools.slice(0, 3).map((tool) => (
+                    <span key={tool} className="glass-dark border border-border px-3 py-1 clip-corner-tl text-xs font-mono">
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div className="grid grid-cols-12 gap-4 mb-8">
         <Link
           to={pagePaths.profile}
