@@ -12,79 +12,99 @@ export function Home() {
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-secondary/5 rounded-full blur-3xl"></div>
 
           <div className="relative z-10">
-            <div className="inline-block mb-4">
-              <span className="glass border border-primary/30 px-4 py-2 clip-corner-tl text-sm font-mono tracking-wider text-primary">
-                SYSTEM.STATUS: AVAILABLE
-              </span>
-            </div>
-            <h1 className="text-4xl md:text-7xl mb-6 font-mono tracking-tight">
-              {portfolio.name.toUpperCase()}
-              <span className="block text-primary data-bars">ML.SYSTEMS</span>
-            </h1>
-            <p className="text-lg text-muted-foreground mb-6 max-w-2xl font-mono">{portfolio.heroHeadline}</p>
-            <p className="text-sm text-muted-foreground mb-4 max-w-3xl font-mono">{portfolio.heroBody}</p>
-            <div className="flex flex-wrap items-center gap-3 mb-8 text-xs font-mono text-muted-foreground">
-              <a href={portfolio.contactPath} className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
-                <Mail className="w-3.5 h-3.5" />
-                {portfolio.email}
-              </a>
-              <a
-                href={portfolio.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 hover:text-primary transition-colors"
-              >
-                <Linkedin className="w-3.5 h-3.5" />
-                LINKEDIN
-              </a>
-            </div>
-            <div className="glass border border-primary/20 clip-corner-tl p-4 mb-8 max-w-3xl">
-              <div className="text-xs font-mono text-primary mb-2 tracking-wider">SEEKING.NOW</div>
-              <p className="text-sm text-muted-foreground font-mono">{portfolio.seeking}</p>
-            </div>
-            <div className="flex flex-wrap gap-4">
-              <a
-                href={portfolio.contactPath}
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 clip-corner-tr hover:opacity-90 transition-all font-mono tracking-wider glow-edge group"
-              >
-                <Mail className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
-                CONTACT.ME
-              </a>
-              <Link
-                to={pagePaths.projects}
-                className="inline-flex items-center gap-2 glass border border-border px-6 py-3 clip-corner-tr hover:border-primary/50 transition-all font-mono tracking-wider group"
-              >
-                <Terminal className="w-4 h-4 group-hover:rotate-12 transition-transform" />
-                VIEW.PROJECTS
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <a
-                href={portfolio.resumePath}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 glass border border-border px-6 py-3 clip-corner-tl hover:border-primary/50 transition-all font-mono tracking-wider"
-              >
-                <Download className="w-4 h-4" />
-                DOWNLOAD.RESUME
-              </a>
-              <a
-                href={portfolio.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 glass border border-border px-6 py-3 clip-corner-br hover:border-primary/50 transition-all font-mono tracking-wider"
-              >
-                <Github className="w-4 h-4" />
-                GITHUB.REPOS
-              </a>
-              <a
-                href={portfolio.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 glass border border-border px-6 py-3 clip-corner-br hover:border-primary/50 transition-all font-mono tracking-wider"
-              >
-                <Linkedin className="w-4 h-4" />
-                LINKEDIN
-              </a>
+            <div className="grid gap-8 xl:grid-cols-[minmax(0,1.35fr)_320px] xl:items-start">
+              <div>
+                <div className="inline-block mb-4">
+                  <span className="glass border border-primary/30 px-4 py-2 clip-corner-tl text-sm font-mono tracking-wider text-primary">
+                    SYSTEM.STATUS: AVAILABLE
+                  </span>
+                </div>
+                <h1 className="text-4xl md:text-7xl mb-6 font-mono tracking-tight">
+                  {portfolio.name.toUpperCase()}
+                  <span className="block text-primary data-bars">ML.SYSTEMS</span>
+                </h1>
+                <p className="text-lg text-muted-foreground mb-6 max-w-2xl font-mono">{portfolio.heroHeadline}</p>
+                <p className="text-sm text-muted-foreground mb-4 max-w-3xl font-mono">{portfolio.heroBody}</p>
+                <div className="flex flex-wrap items-center gap-3 mb-8 text-xs font-mono text-muted-foreground">
+                  <a href={portfolio.contactPath} className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
+                    <Mail className="w-3.5 h-3.5" />
+                    {portfolio.email}
+                  </a>
+                  <a
+                    href={portfolio.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 hover:text-primary transition-colors"
+                  >
+                    <Linkedin className="w-3.5 h-3.5" />
+                    LINKEDIN
+                  </a>
+                </div>
+                <div className="glass border border-primary/20 clip-corner-tl p-4 mb-8 max-w-3xl">
+                  <div className="text-xs font-mono text-primary mb-2 tracking-wider">SEEKING.NOW</div>
+                  <p className="text-sm text-muted-foreground font-mono">{portfolio.seeking}</p>
+                </div>
+                <div className="flex flex-wrap gap-4">
+                  <a
+                    href={portfolio.contactPath}
+                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 clip-corner-tr hover:opacity-90 transition-all font-mono tracking-wider glow-edge group"
+                  >
+                    <Mail className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
+                    CONTACT.ME
+                  </a>
+                  <Link
+                    to={pagePaths.projects}
+                    className="inline-flex items-center gap-2 glass border border-border px-6 py-3 clip-corner-tr hover:border-primary/50 transition-all font-mono tracking-wider group"
+                  >
+                    <Terminal className="w-4 h-4 group-hover:rotate-12 transition-transform" />
+                    VIEW.PROJECTS
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  <a
+                    href={portfolio.resumePath}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 glass border border-border px-6 py-3 clip-corner-tl hover:border-primary/50 transition-all font-mono tracking-wider"
+                  >
+                    <Download className="w-4 h-4" />
+                    DOWNLOAD.RESUME
+                  </a>
+                  <a
+                    href={portfolio.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 glass border border-border px-6 py-3 clip-corner-br hover:border-primary/50 transition-all font-mono tracking-wider"
+                  >
+                    <Github className="w-4 h-4" />
+                    GITHUB.REPOS
+                  </a>
+                  <a
+                    href={portfolio.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 glass border border-border px-6 py-3 clip-corner-br hover:border-primary/50 transition-all font-mono tracking-wider"
+                  >
+                    <Linkedin className="w-4 h-4" />
+                    LINKEDIN
+                  </a>
+                </div>
+              </div>
+              <div className="mx-auto w-full max-w-[320px] xl:mx-0">
+                <div className="flex flex-col items-center xl:items-start">
+                  <div className="rounded-full border border-primary/25 bg-gradient-to-br from-primary/12 via-transparent to-secondary/18 p-2 layered-depth">
+                    <div className="h-32 w-32 overflow-hidden rounded-full border border-white/10 sm:h-36 sm:w-36">
+                      <img
+                        src={portfolio.headshotPath}
+                        alt="Portrait of Cordell Stonecipher"
+                        className="h-full w-full object-cover object-center"
+                      />
+                    </div>
+                  </div>
+                  <div className="mt-4 inline-flex glass border border-primary/30 px-3 py-1 clip-corner-tl text-[10px] font-mono tracking-[0.28em] text-primary">
+                    ENGINEER.PORTRAIT
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

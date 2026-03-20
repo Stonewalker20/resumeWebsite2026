@@ -46,6 +46,17 @@ export function Resume() {
         <div className="col-span-12 lg:col-span-3 glass-dark border border-border clip-corner-br p-6 flex flex-col justify-center items-center text-center relative overflow-hidden">
           <div className="scan-lines absolute inset-0"></div>
           <div className="relative z-10">
+            <div className="mb-5 w-full">
+              <div className="mx-auto w-fit rounded-full border border-primary/25 bg-gradient-to-br from-primary/10 via-transparent to-secondary/20 p-2">
+                <div className="h-28 w-28 overflow-hidden rounded-full border border-white/10">
+                  <img
+                    src={portfolio.headshotPath}
+                    alt="Portrait of Cordell Stonecipher"
+                    className="h-full w-full object-cover object-center"
+                  />
+                </div>
+              </div>
+            </div>
             <a
               href={portfolio.resumePath}
               target="_blank"

@@ -10,6 +10,7 @@ const portfolioPaths = {
   email: `mailto:${emailAddress}`,
   linkedin: linkedinUrl,
   resume: assetUrl("Cordell_Stonecipher_Resume.pdf"),
+  headshot: assetUrl("images/cordell-headshot.jpeg"),
 };
 
 const repoUrl = (repo: string) => `${githubBase}/${repo}`;
@@ -24,6 +25,7 @@ export const portfolio = {
   linkedin: portfolioPaths.linkedin,
   contributionCount: 264,
   resumePath: portfolioPaths.resume,
+  headshotPath: portfolioPaths.headshot,
   updated: "March 2026",
   heroHeadline: "I build AI and machine-learning systems that hold up under real use.",
   seeking:
