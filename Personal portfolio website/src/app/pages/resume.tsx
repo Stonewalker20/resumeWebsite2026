@@ -1,4 +1,5 @@
-import { Download, FileText, Linkedin, Mail, ShieldCheck, Sparkles, Target } from "lucide-react";
+import { CalendarDays, Download, FileText, Linkedin, Mail, ShieldCheck, Sparkles, Target } from "lucide-react";
+import { ContactLink } from "../components/contact-link";
 import { portfolio } from "../content/portfolio";
 
 export function Resume() {
@@ -66,13 +67,25 @@ export function Resume() {
               <Download className="w-4 h-4" />
               EXPORT.PDF
             </a>
-            <a
+            <ContactLink
               href={portfolio.contactPath}
               className="inline-flex items-center gap-2 glass border border-border px-6 py-3 clip-corner-tl hover:border-primary/40 transition-colors mb-4 font-mono tracking-wider w-full justify-center"
             >
               <Mail className="w-4 h-4" />
               CONTACT.ME
+            </ContactLink>
+            <a
+              href={portfolio.schedulingPath}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 glass border border-border px-6 py-3 clip-corner-tl hover:border-primary/40 transition-colors mb-4 font-mono tracking-wider w-full justify-center"
+            >
+              <CalendarDays className="w-4 h-4" />
+              BOOK.15.MIN
             </a>
+            <div className="mb-4 text-xs text-muted-foreground font-mono leading-relaxed">
+              {portfolio.schedulingNote}
+            </div>
             <div className="text-xs text-muted-foreground font-mono">Last updated: {portfolio.updated}</div>
           </div>
         </div>

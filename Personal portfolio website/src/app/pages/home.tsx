@@ -1,7 +1,54 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router";
-import { ArrowRight, BookOpen, Download, Github, Layers, Linkedin, Mail, ShieldCheck, Terminal, Waves } from "lucide-react";
+import { ArrowRight, BookOpen, CalendarDays, Download, Github, Layers, Linkedin, Mail, ShieldCheck, Terminal, Waves } from "lucide-react";
+import { ContactLink } from "../components/contact-link";
 import { portfolio } from "../content/portfolio";
 import { pagePaths } from "../page-paths";
+
+const CONTRIBUTIONS_API_URL = "https://github-contributions-api.jogruber.de/v4/Stonewalker20?y=last";
+
+type GithubContributionsResponse = {
+  total?: Record<string, number>;
+};
+
+function LiveContributionCount() {
+  const [count, setCount] = useState(portfolio.contributionCount);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function loadContributionCount() {
+      try {
+        const response = await fetch(CONTRIBUTIONS_API_URL, {
+          headers: {
+            Accept: "application/json",
+          },
+        });
+
+        if (!response.ok) {
+          return;
+        }
+
+        const data = (await response.json()) as GithubContributionsResponse;
+        const liveCount = data.total?.lastYear ?? Object.values(data.total ?? {})[0];
+
+        if (!cancelled && typeof liveCount === "number" && Number.isFinite(liveCount)) {
+          setCount(liveCount);
+        }
+      } catch {
+        // Keep the verified fallback count when the live request fails.
+      }
+    }
+
+    void loadContributionCount();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  return <>{count}</>;
+}
 
 export function Home() {
   return (
@@ -26,10 +73,10 @@ export function Home() {
                 <p className="text-lg text-muted-foreground mb-6 max-w-2xl font-mono">{portfolio.heroHeadline}</p>
                 <p className="text-sm text-muted-foreground mb-4 max-w-3xl font-mono">{portfolio.heroBody}</p>
                 <div className="flex flex-wrap items-center gap-3 mb-8 text-xs font-mono text-muted-foreground">
-                  <a href={portfolio.contactPath} className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
+                  <ContactLink href={portfolio.contactPath} className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
                     <Mail className="w-3.5 h-3.5" />
                     {portfolio.email}
-                  </a>
+                  </ContactLink>
                   <a
                     href={portfolio.linkedin}
                     target="_blank"
@@ -45,13 +92,13 @@ export function Home() {
                   <p className="text-sm text-muted-foreground font-mono">{portfolio.seeking}</p>
                 </div>
                 <div className="flex flex-wrap gap-4">
-                  <a
+                  <ContactLink
                     href={portfolio.contactPath}
                     className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 clip-corner-tr hover:opacity-90 transition-all font-mono tracking-wider glow-edge group"
                   >
                     <Mail className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
                     CONTACT.ME
-                  </a>
+                  </ContactLink>
                   <Link
                     to={pagePaths.projects}
                     className="inline-flex items-center gap-2 glass border border-border px-6 py-3 clip-corner-tr hover:border-primary/50 transition-all font-mono tracking-wider group"
@@ -68,6 +115,15 @@ export function Home() {
                   >
                     <Download className="w-4 h-4" />
                     DOWNLOAD.RESUME
+                  </a>
+                  <a
+                    href={portfolio.schedulingPath}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 glass border border-border px-6 py-3 clip-corner-br hover:border-primary/50 transition-all font-mono tracking-wider"
+                  >
+                    <CalendarDays className="w-4 h-4" />
+                    BOOK.15.MIN
                   </a>
                   <a
                     href={portfolio.github}
@@ -139,13 +195,27 @@ export function Home() {
               <div className="text-xs text-muted-foreground font-mono">REPORTS</div>
             </div>
             <div>
-              <div className="text-3xl font-mono text-primary mb-1">{portfolio.contributionCount}</div>
+              <div className="text-3xl font-mono text-primary mb-1">
+                <LiveContributionCount />
+              </div>
               <div className="text-xs text-muted-foreground font-mono">CONTRIBS</div>
             </div>
           </div>
           <div className="mt-4 glass border border-border clip-corner-tl p-3 font-mono text-xs text-muted-foreground">
             Current portfolio content reflects active GitHub work, current resume details, research projects, and overall GitHub activity.
           </div>
+          <a
+            href={portfolio.schedulingPath}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex w-full items-start gap-3 glass border border-border px-4 py-3 clip-corner-tl hover:border-primary/50 transition-colors"
+          >
+            <CalendarDays className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+            <span className="font-mono text-xs text-muted-foreground leading-relaxed">
+              <span className="mb-1 block text-primary tracking-wider">BOOK.A.QUICK.CHAT</span>
+              {portfolio.schedulingNote}
+            </span>
+          </a>
         </div>
       </div>
 
@@ -258,13 +328,13 @@ export function Home() {
               Fast contact, LinkedIn, resume PDF, and a direct view into current AI and ML work.
             </p>
             <div className="flex flex-wrap gap-3">
-              <a
+              <ContactLink
                 href={portfolio.contactPath}
                 className="inline-flex items-center gap-2 bg-background text-primary px-5 py-2.5 clip-corner-tl hover:opacity-90 transition-opacity font-mono text-sm tracking-wider"
               >
                 <Mail className="w-4 h-4" />
                 EMAIL
-              </a>
+              </ContactLink>
               <a
                 href={portfolio.resumePath}
                 target="_blank"

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, Outlet, useLocation } from "react-router";
 import { Download, Github, Linkedin, Mail, Menu, Terminal, X } from "lucide-react";
+import { ContactLink } from "./contact-link";
 import { portfolio } from "../content/portfolio";
 import { pagePaths } from "../page-paths";
 
@@ -64,13 +65,13 @@ export function Layout() {
             </nav>
 
             <div className="hidden md:flex items-center gap-2">
-              <a
+              <ContactLink
                 href={portfolio.contactPath}
                 className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 clip-corner-tl hover:opacity-90 transition-opacity font-mono text-xs tracking-wider"
               >
                 <Mail className="w-3.5 h-3.5" />
                 CONTACT
-              </a>
+              </ContactLink>
               <a
                 href={portfolio.linkedin}
                 target="_blank"
@@ -108,12 +109,12 @@ export function Layout() {
                   {item.label.toUpperCase()}
                 </Link>
               )})}
-              <a
+              <ContactLink
                 href={portfolio.contactPath}
                 className="block py-3 px-4 clip-corner-tl bg-primary text-primary-foreground font-mono text-sm tracking-wider"
               >
                 CONTACT
-              </a>
+              </ContactLink>
               <a
                 href={portfolio.linkedin}
                 target="_blank"
@@ -141,13 +142,13 @@ export function Layout() {
             <div className="space-y-2">
               <div className="text-sm font-mono text-primary tracking-wider">QUICK.LINKS</div>
               <div className="flex flex-wrap items-center gap-3">
-                <a
+                <ContactLink
                   href={portfolio.contactPath}
                   className="inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-primary transition-colors font-mono"
                 >
                   <Mail className="w-3.5 h-3.5" />
                   EMAIL
-                </a>
+                </ContactLink>
                 <a
                   href={portfolio.linkedin}
                   target="_blank"

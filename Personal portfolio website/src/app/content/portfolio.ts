@@ -4,6 +4,7 @@ const assetUrl = (relativePath: string) =>
 const githubBase = "https://github.com/Stonewalker20";
 const emailAddress = "stoneciphercordell@gmail.com";
 const linkedinUrl = "https://linkedin.com/in/cordell-stonecipher-27a54a14a";
+const schedulingUrl = "https://calendar.app.google/5XGtbua7ZWXBU3Z27";
 
 const portfolioPaths = {
   github: githubBase,
@@ -11,6 +12,7 @@ const portfolioPaths = {
   linkedin: linkedinUrl,
   resume: assetUrl("Cordell_Stonecipher_Resume.pdf"),
   headshot: assetUrl("images/cordell-headshot.jpeg"),
+  scheduling: schedulingUrl,
 };
 
 const repoUrl = (repo: string) => `${githubBase}/${repo}`;
@@ -23,13 +25,16 @@ export const portfolio = {
   email: emailAddress,
   contactPath: portfolioPaths.email,
   linkedin: portfolioPaths.linkedin,
-  contributionCount: 264,
+  contributionCount: 291,
   resumePath: portfolioPaths.resume,
   headshotPath: portfolioPaths.headshot,
+  schedulingPath: portfolioPaths.scheduling,
   updated: "March 2026",
   heroHeadline: "I build AI and machine-learning systems that hold up under real use.",
   seeking:
     "Seeking ML Engineer and Applied AI roles where product delivery, evaluation discipline, and reliability all matter.",
+  schedulingNote:
+    "Quick 15-minute meeting for recruiter outreach, ML/AI role discussions, portfolio walkthroughs, and collaboration inquiries.",
   heroBody:
     "Recent work spans a full-stack career intelligence product, an open-source LLM reliability framework, numerical fragility experiments for MLOps, and notebook-based NLP and optimization projects. I work across frontend, backend, modeling, and evaluation when the product needs all four.",
   summary:
