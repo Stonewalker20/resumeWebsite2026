@@ -30,27 +30,27 @@ export const portfolio = {
   headshotPath: portfolioPaths.headshot,
   schedulingPath: portfolioPaths.scheduling,
   updated: "March 2026",
-  heroHeadline: "I build AI and machine-learning systems that hold up under real use.",
+  heroHeadline: "I build AI and machine-learning systems that are useful, reliable, and ready for real-world use.",
   seeking:
-    "Seeking ML Engineer and Applied AI roles where product delivery, evaluation discipline, and reliability all matter.",
+    "Open to ML Engineer and Applied AI roles where thoughtful product work, strong evaluation, and reliability all matter.",
   schedulingNote:
-    "Quick 15-minute meeting for recruiter outreach, ML/AI role discussions, portfolio walkthroughs, and collaboration inquiries.",
+    "Happy to chat for 15 minutes about roles, current projects, or ways we might work together.",
   heroBody:
-    "Recent work spans a full-stack career intelligence product, an open-source LLM reliability framework, numerical fragility experiments for MLOps, and notebook-based NLP and optimization projects. I work across frontend, backend, modeling, and evaluation when the product needs all four.",
+    "My recent work includes a full-stack career intelligence product, an open-source LLM reliability framework, numerical stability experiments for MLOps, and notebook-based NLP and optimization projects. I enjoy working across frontend, backend, modeling, and evaluation when the product needs all of them.",
   summary:
-    "Machine Learning Engineer / Applied AI Engineer with hands-on experience across full-stack product delivery, LLM evaluation, MLOps reliability, and transformer-based NLP. I build systems end to end, measure failure modes directly, and turn experiments into repeatable engineering work.",
+    "Machine Learning Engineer / Applied AI Engineer with hands-on experience across full-stack product delivery, LLM evaluation, MLOps reliability, and transformer-based NLP. I like building systems end to end, understanding where they fail, and turning experiments into dependable engineering work.",
   proofPoints: [
     {
       label: "Current focus",
-      value: "Applied AI products, LLM reliability, and ML systems",
+      value: "Applied AI products, LLM reliability, and practical ML systems",
     },
     {
       label: "Public repos",
-      value: "7 active GitHub projects spanning frontend, backend, and ML",
+      value: "7 GitHub projects spanning frontend, backend, and machine learning",
     },
     {
       label: "Research base",
-      value: "4 report-backed projects across NLP, vision, and applied analytics",
+      value: "4 report-backed projects across NLP, computer vision, and applied analytics",
     },
   ],
   quickLinks: [
@@ -62,33 +62,33 @@ export const portfolio = {
   valueProps: [
     {
       title: "What I deliver",
-      body: "AI and ML systems that combine product UI, backend services, model logic, and evaluation",
+      body: "AI and ML systems that bring together product UI, backend services, model logic, and evaluation",
     },
     {
       title: "What I optimize for",
-      body: "reliability, useful metrics, clean interfaces, and work that can be reproduced after handoff",
+      body: "reliability, useful metrics, clean interfaces, and work that is easy for others to pick up",
     },
     {
       title: "Where I add value",
-      body: "Applied AI products, ML systems, MLOps, evaluation harnesses, and engineering-focused experimentation",
+      body: "Applied AI products, ML systems, MLOps, evaluation tooling, and engineering-focused experimentation",
     },
   ],
   targetRoles: [
-    "Applied AI Engineer: ship product-facing AI features with sound evaluation and fallback behavior",
-    "Machine Learning Engineer: own training, pipelines, APIs, and deployment-aware engineering decisions",
-    "ML / AI Platform Engineer: build reliability tooling, evaluation harnesses, and reproducible workflows",
+    "Applied AI Engineer: build product-facing AI features with strong evaluation and thoughtful fallback behavior",
+    "Machine Learning Engineer: own training, pipelines, APIs, and practical deployment decisions",
+    "ML / AI Platform Engineer: create reliability tooling, evaluation workflows, and reproducible systems",
   ],
   strengths: [
     "Full-stack execution across React, FastAPI, Python ML, and deployment workflows",
-    "Reliability mindset: measure drift, prompt injection, schema failures, and fragile behavior directly",
-    "Modeling depth: PyTorch, transformers, optimization, and NLP experimentation",
-    "Product framing: connect technical decisions to user workflows like job matching, evidence intake, and reporting",
+    "A reliability mindset that looks directly at drift, prompt injection, schema failures, and fragile behavior",
+    "Strong modeling depth across PyTorch, transformers, optimization, and NLP experimentation",
+    "Product thinking that connects technical decisions to real user workflows like job matching, evidence intake, and reporting",
   ],
   operatingStyle: [
-    "start from the user workflow and define what success actually means",
-    "build the data path, model path, and interface path together",
-    "measure real failure modes instead of relying on a single headline metric",
-    "leave behind reproducible repos, readable code, and clear documentation",
+    "Start with the user workflow and get clear on what success really looks like",
+    "Build the data path, model path, and interface path together",
+    "Measure real failure modes instead of relying on one headline metric",
+    "Leave behind reproducible repos, readable code, and clear documentation",
   ],
   projectDomains: [
     "Full-stack AI",
@@ -101,15 +101,15 @@ export const portfolio = {
   recentStack: [
     {
       name: "Python + TypeScript",
-      detail: "backend APIs, ML pipelines, and frontend delivery",
+      detail: "for backend APIs, ML pipelines, and frontend delivery",
     },
     {
       name: "React + FastAPI + MongoDB",
-      detail: "user-facing products with API-driven workflows",
+      detail: "for user-facing products with API-driven workflows",
     },
     {
       name: "PyTorch + Transformers + MLflow",
-      detail: "training, evaluation, and experiment tracking",
+      detail: "for training, evaluation, and experiment tracking",
     },
   ],
   skillGroups: [
@@ -302,25 +302,25 @@ export const portfolio = {
       period: "2026",
       title: "Portfolio and public positioning",
       body:
-        "Rebuilt the portfolio as a React/Vite site on GitHub Pages with recruiter-facing contact, current projects, and cleaner deployment flow.",
+        "Rebuilt the portfolio as a React/Vite site on GitHub Pages with clearer project storytelling, easier contact, and a cleaner deployment flow.",
     },
     {
       period: "2026",
       title: "SkillBridge product build",
       body:
-        "Shipped a full-stack AI product covering evidence ingestion, skills data, job-fit analysis, and tailored resume generation.",
+        "Built a full-stack AI product for evidence ingestion, skills data, job-fit analysis, and tailored resume generation.",
     },
     {
       period: "2026",
       title: "TrustStack reliability work",
       body:
-        "Started an open-source LLM evaluation framework centered on guardrails, prompt injection, groundedness, and reproducible reporting.",
+        "Started an open-source LLM evaluation framework focused on guardrails, prompt injection, groundedness, and reproducible reporting.",
     },
     {
       period: "2025-2026",
       title: "ML systems and research base",
       body:
-        "Built PyTorch, NLP, optimization, and computer vision projects that strengthened the modeling and experimentation side of the portfolio.",
+        "Built PyTorch, NLP, optimization, and computer vision projects that strengthened the modeling and experimentation side of my work.",
     },
   ],
   researchReports: [
@@ -392,5 +392,5 @@ export const portfolio = {
     },
   ],
   longTermDirection:
-    "Long term, I want to build practical AI products that are both useful and trustworthy, especially where reliability matters as much as raw model performance.",
+    "Long term, I want to build practical AI products that feel genuinely useful and trustworthy, especially in places where reliability matters as much as model performance.",
 };

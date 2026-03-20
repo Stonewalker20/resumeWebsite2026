@@ -211,7 +211,7 @@ export function Home() {
             </div>
           </div>
           <div className="mt-4 glass border border-border clip-corner-tl p-3 font-mono text-xs text-muted-foreground">
-            Current portfolio content reflects active GitHub work, current resume details, research projects, and overall GitHub activity.
+            A quick snapshot of the work, projects, and research that best reflect what I am building right now.
           </div>
         </div>
       </div>
@@ -322,7 +322,7 @@ export function Home() {
           <div className="relative z-10">
             <h2 className="text-3xl font-mono tracking-wider mb-4 text-background">QUICK.ACCESS</h2>
             <p className="text-background/80 mb-6 font-mono text-sm">
-              Fast contact, LinkedIn, resume PDF, and a direct view into current AI and ML work.
+              Easy ways to get in touch, view my resume, and take a closer look at the AI and ML work I am most excited about.
             </p>
             <div className="flex flex-wrap gap-3">
               <ContactLink

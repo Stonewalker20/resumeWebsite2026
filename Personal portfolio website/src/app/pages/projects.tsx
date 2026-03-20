@@ -26,7 +26,7 @@ export function Projects() {
           FEATURED <span className="text-primary">WORK</span>
         </h1>
         <p className="text-xl text-muted-foreground max-w-2xl font-mono">
-          Featured repo case studies, a full GitHub project index, and research reports that show how the work evolved.
+          A few featured projects, the full GitHub repo list, and research reports that show how my work has grown over time.
         </p>
       </div>
 
@@ -285,7 +285,7 @@ export function Projects() {
           <div className="relative z-10">
             <h2 className="text-3xl md:text-4xl mb-4 font-mono tracking-wider text-background">ENGINEERING.MINDSET</h2>
             <p className="text-background/90 mb-6 font-mono text-sm max-w-xl">
-              These projects emphasize product usefulness, measurable failure modes, and the engineering tradeoffs needed to make AI systems credible.
+              These projects reflect how I like to work: build something useful, understand where it can fail, and make the tradeoffs clear enough to trust.
             </p>
             <a
               href={portfolio.github}
