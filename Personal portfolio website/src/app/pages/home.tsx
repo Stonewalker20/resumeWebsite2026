@@ -204,18 +204,38 @@ export function Home() {
           <div className="mt-4 glass border border-border clip-corner-tl p-3 font-mono text-xs text-muted-foreground">
             Current portfolio content reflects active GitHub work, current resume details, research projects, and overall GitHub activity.
           </div>
-          <a
-            href={portfolio.schedulingPath}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-flex w-full items-start gap-3 glass border border-border px-4 py-3 clip-corner-tl hover:border-primary/50 transition-colors"
-          >
-            <CalendarDays className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
-            <span className="font-mono text-xs text-muted-foreground leading-relaxed">
-              <span className="mb-1 block text-primary tracking-wider">BOOK.A.QUICK.CHAT</span>
-              {portfolio.schedulingNote}
-            </span>
-          </a>
+        </div>
+      </div>
+
+      <div className="mb-8 clip-corner-all border border-primary/30 bg-gradient-to-r from-primary/18 via-secondary/20 to-primary/10 p-6 md:p-8 relative overflow-hidden">
+        <div className="mesh-gradient absolute inset-0 opacity-70"></div>
+        <div className="relative z-10 flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 glass-dark border border-primary/30 px-3 py-1 clip-corner-tl text-xs font-mono tracking-wider text-primary mb-4">
+              <CalendarDays className="h-3.5 w-3.5" />
+              QUICK.CHAT
+            </div>
+            <h2 className="text-2xl md:text-4xl font-mono tracking-wider text-foreground mb-3">BOOK A 15-MINUTE CONVERSATION</h2>
+            <p className="text-sm md:text-base text-muted-foreground font-mono leading-relaxed">{portfolio.schedulingNote}</p>
+          </div>
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:max-w-sm lg:justify-end">
+            <a
+              href={portfolio.schedulingPath}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-primary px-6 py-3 clip-corner-tr text-primary-foreground hover:opacity-90 transition-opacity font-mono tracking-wider"
+            >
+              <CalendarDays className="h-4 w-4" />
+              BOOK.15.MIN
+            </a>
+            <ContactLink
+              href={portfolio.contactPath}
+              className="inline-flex items-center justify-center gap-2 glass-dark border border-border px-6 py-3 clip-corner-tl hover:border-primary/50 transition-colors font-mono tracking-wider"
+            >
+              <Mail className="h-4 w-4" />
+              EMAIL.INSTEAD
+            </ContactLink>
+          </div>
         </div>
       </div>
 
