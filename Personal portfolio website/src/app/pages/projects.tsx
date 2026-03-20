@@ -1,5 +1,25 @@
-import { ExternalLink, FileText, Github } from "lucide-react";
+import { ExternalLink, FileText, Github, ImageOff } from "lucide-react";
 import { portfolio } from "../content/portfolio";
+
+function ComingSoonBadge({
+  label,
+  compact = false,
+}: {
+  label: string;
+  compact?: boolean;
+}) {
+  return (
+    <div
+      className={`inline-flex items-center gap-2 border border-amber-300/30 bg-amber-300/10 text-amber-100 font-mono uppercase ${
+        compact ? "px-2.5 py-1 text-[9px] tracking-[0.22em]" : "px-3 py-1.5 text-[10px] tracking-[0.24em]"
+      }`}
+    >
+      <ImageOff className={compact ? "h-3 w-3" : "h-3.5 w-3.5"} />
+      <span>{label}</span>
+      <span>Coming Soon</span>
+    </div>
+  );
+}
 
 export function Projects() {
   return (
@@ -51,17 +71,20 @@ export function Projects() {
                 </div>
               </div>
             ) : (
-              <div className="relative z-10 h-full grid grid-cols-2 gap-3">
-                {portfolio.caseStudies[0].preview.map((item, index) => (
-                  <div
-                    key={item}
-                    className={`glass-dark border border-border/70 p-4 font-mono text-xs tracking-wider flex items-end ${
-                      index % 2 === 0 ? "clip-corner-tl" : "clip-corner-br"
-                    }`}
-                  >
-                    {item.toUpperCase()}
-                  </div>
-                ))}
+              <div className="relative z-10 h-full flex flex-col gap-3">
+                <ComingSoonBadge label="Preview Images" />
+                <div className="grid flex-1 grid-cols-2 gap-3">
+                  {portfolio.caseStudies[0].preview.map((item, index) => (
+                    <div
+                      key={item}
+                      className={`glass-dark border border-border/70 p-4 font-mono text-xs tracking-wider flex items-end ${
+                        index % 2 === 0 ? "clip-corner-tl" : "clip-corner-br"
+                      }`}
+                    >
+                      {item.toUpperCase()}
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
           </div>
@@ -120,17 +143,20 @@ export function Projects() {
             >
               <div className="aspect-video overflow-hidden relative bg-gradient-to-br from-secondary/15 via-transparent to-primary/15 p-4">
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/80 to-transparent"></div>
-                <div className="relative z-10 grid grid-cols-2 gap-2 h-full">
-                  {project.preview.map((item, previewIndex) => (
-                    <div
-                      key={item}
-                      className={`glass-dark border border-border/70 p-3 text-[10px] font-mono tracking-wider flex items-end ${
-                        previewIndex % 2 === 0 ? "clip-corner-tl" : "clip-corner-br"
-                      }`}
-                    >
-                      {item.toUpperCase()}
-                    </div>
-                  ))}
+                <div className="relative z-10 flex h-full flex-col gap-2">
+                  <ComingSoonBadge label="Preview Images" compact />
+                  <div className="grid flex-1 grid-cols-2 gap-2">
+                    {project.preview.map((item, previewIndex) => (
+                      <div
+                        key={item}
+                        className={`glass-dark border border-border/70 p-3 text-[10px] font-mono tracking-wider flex items-end ${
+                          previewIndex % 2 === 0 ? "clip-corner-tl" : "clip-corner-br"
+                        }`}
+                      >
+                        {item.toUpperCase()}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
               <div className="p-5">
@@ -187,16 +213,16 @@ export function Projects() {
               <div className="p-6 relative">
                 <div className="grid-pattern absolute inset-0 opacity-20"></div>
                 <div className="relative z-10">
-                  <div className="flex items-start justify-between gap-3 mb-3">
-                    <div>
-                      <div className="font-mono text-xs text-primary mb-1 tracking-wider">REPOSITORY</div>
-                      <h3 className="font-mono tracking-wider break-words">{project.name}</h3>
-                    </div>
-                    <ExternalLink className="w-4 h-4 text-primary flex-shrink-0" />
+                <div className="flex items-start justify-between gap-3 mb-3">
+                  <div>
+                    <div className="font-mono text-xs text-primary mb-1 tracking-wider">REPOSITORY</div>
+                    <h3 className="font-mono tracking-wider break-words">{project.name}</h3>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-3 font-mono text-xs leading-relaxed">{project.tagline}</p>
-                  <p className="text-sm text-muted-foreground mb-4 font-mono text-xs leading-relaxed">{project.details}</p>
-                  <div className="flex flex-wrap gap-2">
+                  <ExternalLink className="w-4 h-4 text-primary flex-shrink-0" />
+                </div>
+                <p className="text-sm text-muted-foreground mb-3 font-mono text-xs leading-relaxed">{project.tagline}</p>
+                <p className="text-sm text-muted-foreground mb-4 font-mono text-xs leading-relaxed">{project.details}</p>
+                <div className="flex flex-wrap gap-2">
                     {project.tools.map((tool) => (
                       <span key={tool} className="glass-dark border border-border px-2.5 py-1 clip-corner-tl text-xs font-mono">
                         {tool}
