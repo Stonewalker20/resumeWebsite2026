@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { ArrowRight, BookOpen, CalendarDays, Download, Github, Layers, Linkedin, Mail, ShieldCheck, Terminal, Waves } from "lucide-react";
 import { ContactLink } from "../components/contact-link";
 import { portfolio } from "../content/portfolio";
+import { trackAnalyticsEvent } from "../lib/analytics";
 import { pagePaths } from "../page-paths";
 
 const CONTRIBUTIONS_API_URL = "https://github-contributions-api.jogruber.de/v4/Stonewalker20?y=last";
@@ -63,6 +64,7 @@ export function Home() {
             href={portfolio.schedulingPath}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackAnalyticsEvent("Booking Click", { location: "home_top_banner" })}
             className="inline-flex items-center justify-center gap-2 bg-primary px-5 py-2 clip-corner-tr text-primary-foreground hover:opacity-90 transition-opacity font-mono text-sm tracking-wider"
           >
             <CalendarDays className="h-4 w-4" />
@@ -119,6 +121,7 @@ export function Home() {
                   </ContactLink>
                   <Link
                     to={pagePaths.projects}
+                    onClick={() => trackAnalyticsEvent("Projects Click", { location: "home_hero" })}
                     className="inline-flex items-center gap-2 glass border border-border px-6 py-3 clip-corner-tr hover:border-primary/50 transition-all font-mono tracking-wider group"
                   >
                     <Terminal className="w-4 h-4 group-hover:rotate-12 transition-transform" />
@@ -129,6 +132,7 @@ export function Home() {
                     href={portfolio.resumePath}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackAnalyticsEvent("Resume Download", { location: "home_hero" })}
                     className="inline-flex items-center gap-2 glass border border-border px-6 py-3 clip-corner-tl hover:border-primary/50 transition-all font-mono tracking-wider"
                   >
                     <Download className="w-4 h-4" />
@@ -138,6 +142,7 @@ export function Home() {
                     href={portfolio.github}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackAnalyticsEvent("GitHub Click", { location: "home_hero" })}
                     className="inline-flex items-center gap-2 glass border border-border px-6 py-3 clip-corner-br hover:border-primary/50 transition-all font-mono tracking-wider"
                   >
                     <Github className="w-4 h-4" />
@@ -147,6 +152,7 @@ export function Home() {
                     href={portfolio.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackAnalyticsEvent("LinkedIn Click", { location: "home_hero" })}
                     className="inline-flex items-center gap-2 glass border border-border px-6 py-3 clip-corner-br hover:border-primary/50 transition-all font-mono tracking-wider"
                   >
                     <Linkedin className="w-4 h-4" />
@@ -278,6 +284,7 @@ export function Home() {
           </div>
           <Link
             to={pagePaths.projects}
+            onClick={() => trackAnalyticsEvent("Projects Click", { location: "home_featured_snapshots" })}
             className="inline-flex items-center gap-2 glass border border-border px-5 py-3 clip-corner-tl hover:border-primary/50 transition-colors font-mono text-sm tracking-wider"
           >
             VIEW.ALL.PROJECTS
@@ -414,6 +421,7 @@ export function Home() {
                 href={portfolio.resumePath}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackAnalyticsEvent("Resume Download", { location: "home_quick_access" })}
                 className="inline-flex items-center gap-2 glass-dark border border-background/30 px-5 py-2.5 clip-corner-br hover:bg-background/10 transition-colors font-mono text-sm tracking-wider text-background"
               >
                 <Download className="w-4 h-4" />
@@ -423,6 +431,7 @@ export function Home() {
                 href={portfolio.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackAnalyticsEvent("LinkedIn Click", { location: "home_quick_access" })}
                 className="inline-flex items-center gap-2 glass-dark border border-background/30 px-5 py-2.5 clip-corner-br hover:bg-background/10 transition-colors font-mono text-sm tracking-wider text-background"
               >
                 <Linkedin className="w-4 h-4" />
@@ -432,6 +441,7 @@ export function Home() {
                 href={portfolio.github}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackAnalyticsEvent("GitHub Click", { location: "home_quick_access" })}
                 className="inline-flex items-center gap-2 glass-dark border border-background/30 px-5 py-2.5 clip-corner-br hover:bg-background/10 transition-colors font-mono text-sm tracking-wider text-background"
               >
                 <Github className="w-4 h-4" />

@@ -1,6 +1,7 @@
 import { CalendarDays, Download, FileText, Linkedin, Mail, ShieldCheck, Sparkles, Target } from "lucide-react";
 import { ContactLink } from "../components/contact-link";
 import { portfolio } from "../content/portfolio";
+import { trackAnalyticsEvent } from "../lib/analytics";
 
 export function Resume() {
   return (
@@ -35,6 +36,7 @@ export function Resume() {
                 href={portfolio.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackAnalyticsEvent("LinkedIn Click", { location: "resume_header" })}
                 className="inline-flex items-center gap-2 hover:text-background transition-colors"
               >
                 <Linkedin className="w-4 h-4" />
@@ -62,6 +64,7 @@ export function Resume() {
               href={portfolio.resumePath}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackAnalyticsEvent("Resume Download", { location: "resume_sidebar" })}
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 clip-corner-tl hover:opacity-90 transition-opacity mb-4 font-mono tracking-wider w-full justify-center"
             >
               <Download className="w-4 h-4" />
@@ -78,6 +81,7 @@ export function Resume() {
               href={portfolio.schedulingPath}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackAnalyticsEvent("Booking Click", { location: "resume_sidebar" })}
               className="inline-flex items-center gap-2 glass border border-border px-6 py-3 clip-corner-tl hover:border-primary/40 transition-colors mb-4 font-mono tracking-wider w-full justify-center"
             >
               <CalendarDays className="w-4 h-4" />

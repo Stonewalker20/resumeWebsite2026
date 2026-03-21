@@ -1,3 +1,5 @@
+import { trackAnalyticsEvent } from "../lib/analytics";
+
 let lastContactClickAt = 0;
 
 type ContactLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement>;
@@ -17,6 +19,9 @@ export function ContactLink({ onClick, href, ...props }: ContactLinkProps) {
         }
 
         lastContactClickAt = now;
+        trackAnalyticsEvent("Contact Click", {
+          href: href || "mailto",
+        });
         onClick?.(event);
       }}
     />
